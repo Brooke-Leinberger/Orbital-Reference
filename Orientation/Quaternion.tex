@@ -1,0 +1,385 @@
+%\newcommand{\ih}{\hat{\textcolor{black}{i}}}
+%\newcommand{\jh}{\hat{\textcolor{black}{j}}}
+%\newcommand{\kh}{\hat{\textcolor{black}{k}}}
+
+\section{Quaternions}
+Quaternions are by far the simplest way to encode rotation in a 3D space without fiddling with Matrices (which we will have to eventually) or Euler Angles (can cause gimbal lock).
+
+\subsection{Construction}
+Unit Quaternions are specifically what is simplest for rotation. They only require 2 parameters to construct, and have 4 outputs:
+\\
+\begin{minipage}{\textwidth}
+\begin{multicols}{2}
+\noindent
+\raggedcolumns
+Inputs:
+\begin{itemize}
+\item $\theta$ : amount to rotate by, counter clockwise, in radians
+\item $\vec{a}$ : vector to rotate by $\theta$ 
+\end{itemize}
+\columnbreak
+Outputs:
+\begin{itemize}
+\item $w$ : real component
+\item $x$ : $\hat{i}$ component
+\item $y$ : $\jh$ component
+\item $z$ : $\kh$ component
+\end{itemize}
+\end{multicols}
+\end{minipage}
+\bigskip
+%\bigskip
+\\
+Mathematically, A Quaternion is represented as the sum of these output components:
+$$Q_n = w + x\hat{i} + y\jh + z\kh$$
+The unfortunate drawback to Quaternions is that they're not easily readable at a glance; it's hard to tell what they're doing. But this is made up for by they're ease of use and construction, if you can keep track of them properly.
+
+\begin{minipage}{\textwidth}
+Constructing a Unit Quaternion for rotation is pretty straightforward:
+\\
+$$w=\cos{\left(\frac{\theta}{2}\right)}$$
+$$x=\sin{\left(\frac{\theta}{2}\right)}\cdot\frac{\vec{a}_x}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}$$ 
+$$y=\sin{\left(\frac{\theta}{2}\right)}\cdot\frac{\vec{a}_y}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}$$ 
+$$z=\sin{\left(\frac{\theta}{2}\right)}\cdot\frac{\vec{a}_z}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}$$\\
+\end{minipage}
+%\bigskip
+\indent Another useful construct for rotating points/vectors by Quaternions is the \textbf{Quaternion Conjugate}. They are simply a Quaternion, where the $\theta$ input has been negated before construction. The are denoted by putting an asterisk after the symbol for the original Quaternion (EX: $Q \rightarrow Q^*$).
+\\[7.5pt]
+\begin{minipage}{\textwidth}
+$$w=\cos\left(\frac{-\theta}{2}\right)=\cos{\theta}$$
+$$x=\sin\left(\frac{-\theta}{2}\right)\cdot\frac{\vec{a}_x}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}=-\sin{\theta}\cdot\frac{\vec{a}_x}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}$$ 
+$$y=\sin\left(\frac{-\theta}{2}\right)\cdot\frac{\vec{a}_y}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}=-\sin{\theta}\cdot\frac{\vec{a}_y}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}$$ 
+$$z=\sin\left(\frac{-\theta}{2}\right)\cdot\frac{\vec{a}_z}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}=-\sin{\theta}\cdot\frac{\vec{a}_z}{\sqrt{\vec{a}_x^2+\vec{a}_y^2+\vec{a}_z^2}}$$ \\
+\end{minipage}
+
+Lastly, if you have a vector that you wish to treat like a Quaternion, for purposes such as multiplication, it is even simpler: treat it identically to Quaternion, with a real component of zero. \textbf{Note:} this will \textbf{not} be a Unit Quaternion unless the original vector is a unit vector. 
+\\[10pt]
+For a vector $\vec{V}$:
+
+$$w=0$$
+$$x=\vec{V}_x\ih$$
+$$y=\vec{V}_y\jh$$
+$$z=\vec{V}_z\kh$$
+\newpage
+\subsection{Multiplication}
+Another drawback to using Quaternions is trying to multiply them by hand. It's a simple operation of multiply two 4th degree polynomials, but since they're 4th degree polynomials, it can be extraordinarily tedious. Luckily this is a calculation that is very, very easy to do by a computer. 
+
+There is one catch to multiplying Quaternions: order matters. The multiplication of the $\ih$, $\jh$, and $\kh$ factors are \textbf{\textit{non-commutative}}. This means that multiplying entire Quaternions is also \textbf{\textit{non-commutative}}: $Q_1Q_2 \neq Q_2Q_1$. It is very similar to cross products in linear algebra: 
+\\[7.5pt]
+\begin{minipage}{\textwidth}
+\begin{adjustwidth}{10em}{10em}
+\begin{multicols}{3}
+%\noindent
+%\raggedcolumns
+\begin{itemize}
+\item $\ih\jh=\kh$
+\item $\jh\kh=\ih$
+\item $\kh\ih=\jh$
+\end{itemize}
+\columnbreak
+\begin{itemize}
+\item $\ih\kh=-\jh$
+\item $\kh\jh=-\ih$
+\item $\jh\ih=-\kh$
+\end{itemize}
+\columnbreak
+\begin{itemize}
+\item $\ih\ih=-1$
+\item $\jh\jh=-1$
+\item $\kh\kh=-1$
+\end{itemize}
+\columnbreak
+\end{multicols}
+\end{adjustwidth}
+\indent An easy shorthand for memorizing whether a product is positive or negative is to imagine them in a row as $\ih\jh\kh\ih$. Take the factors you are trying to multiply and see if they match that order. If they do, then the product is positive. If you need to reverse the order of your factors to get it to match, then their product is negative. The product of such Quaternion multiplication is called the \textbf{Hamilton Product} of the two Quaternions. The Hamilton Product of $Q_AQ_B$ is a Quaternion representing a rotation of $Q_B$, followed by $Q_A$.
+\end{minipage}
+\\[7.5pt]
+
+EXAMPLE:
+
+$$Q_A=A_w+A_x\ih+A_y\jh+A_z\kh$$
+$$Q_B=B_w+B_x\ih+B_y\jh+B_z\kh$$
+$$Q_AQ_B = \left(A_w+A_x\ih+A_y\jh+A_z\kh\right)\cdot\left(B_w+B_x\ih+B_y\jh+B_z\kh\right)$$
+
+\begin{align*}
+Q_AQ_B = 
+& A_w B_w + A_x\ih B_x\ih + A_y\jh B_y\jh + A_z\kh B_z\kh\\+
+& A_w B_x\ih + A_x\ih B_w + A_y\jh B_z\kh + A_z\kh B_y\jh\\+
+& A_w B_y\jh + A_y\jh B_w + A_z\kh B_x\ih + A_x\ih B_z\kh\\+
+& A_w B_z\kh + A_z\kh B_w + A_x\ih B_y\kh + A_y\jh B_x\ih\\
+\end{align*}
+
+\begin{align*}
+Q_AQ_B = 
+& \left(A_wB_w - A_xB_x - A_yB_y - A_zB_z\right)\\+
+& \left(A_wB_x + A_xB_w + A_yB_z - A_zB_y\right)\ih\\+
+& \left(A_wB_y + A_yB_w + A_zB_x - A_xB_z\right)\jh\\+
+& \left(A_wB_z + A_zB_w + A_xB_y - A_yB_x\right)\kh\\
+\end{align*}
+\subsection{Rotation}
+Quaternions make rotating a point/vector in 3D space very simple, since it only requires Quaternion Multiplication. If want to rotate a vector $V$ by a Quaternion $Q_R$, to get its image $V'$, it is simply a composition of 2 Quaternion Multiplications.
+$$Q_{V'} = Q_RQ_VQ_R^*$$
+The Quaternion $Q_{V'}$ will be a Quaternion with a real component of zero, making it very simple to convert back to a 3D vector. Simply correspond the $x$,$y$,$z$ components of the Quaternion to the respective $x$,$y$,$z$ components of a Vector.
+
+\subsection{Matrix Conversion}
+Lastly, there are some cases where Matrices are easier to deal with than Quaternions.  
+
+$$Q_RQ_VQ_R^* = \left(R_w + R_x\ih + R_y\jh + R_z\kh\right)\cdot\left(V_w + V_x\ih + V_y\jh + V_z\kh\right)\cdot\left(R_w - R_x\ih - R_y\jh - R_z\kh\right)$$
+
+\begin{align*}
+Q_RQ_VQ_R^* = 
+\Big( 
+	& \left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)+
+	  \left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\\+
+	& \left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh+
+	  \left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh\Big)\\\cdot 
+	& \left(R_w - R_x\ih - R_y\jh - R_z\kh\right)
+\end{align*}
+
+
+\begin{align*}
+Q_RQ_VQ_R^* = 
+\Big(
+	& \left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)+
+	  \left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\\+
+	& \left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh+
+	  \left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh\Big)
+	R_w\\-
+\Big( 
+	& \left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)+
+	  \left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\\+
+	& \left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh+
+	  \left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh\Big)
+	R_x\ih\\-
+\Big(
+	& \left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)+
+	  \left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\\+
+	& \left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh+
+	  \left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh\Big)
+	R_y\jh\\-
+\Big(
+	& \left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)+
+	  \left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\\+
+	& \left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh+
+	  \left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh\Big)
+	R_z\kh
+\end{align*}
+
+\begin{align*}
+Q_RQ_VQ_R^* = 
+	 & R_w\left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)
+	+  R_w\left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\\
+	+& R_w\left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh
+	+  R_w\left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh
+	\\
+	-& R_x\left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)\ih
+	-  R_x\left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\ih\\
+	-& R_x\left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh\ih
+	-  R_x\left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh\ih
+	\\
+	-& R_y\left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)\jh
+	-  R_y\left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\jh\\
+	-& R_y\left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh\jh
+	-  R_y\left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh\jh
+	\\
+	-& R_z\left(R_wV_w - R_xV_x - R_yV_y - R_zV_z\right)\kh
+	-  R_z\left(R_wV_x + R_xV_w + R_yV_z - R_zV_y\right)\ih\kh\\
+	-& R_z\left(R_wV_y + R_yV_w + R_zV_x - R_xV_z\right)\jh\kh
+	-  R_z\left(R_wV_z + R_zV_w + R_xV_y - R_yV_x\right)\kh\kh
+\end{align*}
+
+\begin{align*}
+Q_RQ_VQ_R^* = 
+	 & \left(R_w^2V_w - R_wR_xV_x - R_wR_yV_y - R_wR_zV_z\right)
+	+  \left(R_w^2V_x + R_wR_xV_w + R_wR_yV_z - R_wR_zV_y\right)\ih\\
+	+& \left(R_w^2V_y + R_wR_yV_w + R_wR_zV_x - R_wR_xV_z\right)\jh
+	+  \left(R_w^2V_z + R_wR_zV_w + R_wR_xV_y - R_wR_yV_x\right)\kh
+	\\
+	-& \left(R_wR_xV_w - R_x^2V_x - R_xR_yV_y - R_xR_zV_z\right)\ih
+	+  \left(R_wR_xV_x + R_x^2V_w + R_xR_yV_z - R_xR_zV_y\right)\\
+	+& \left(R_wR_xV_y + R_xR_yV_w + R_xR_zV_x - R_x^2V_z\right)\kh
+	-  \left(R_wR_xV_z + R_xR_zV_w + R_x^2V_y - R_xR_yV_x\right)\jh
+	\\
+	-& \left(R_wR_yV_w - R_xR_yV_x - R_y^2V_y - R_yR_zV_z\right)\jh
+	-  \left(R_wR_yV_x + R_xR_yV_w + R_y^2V_z - R_yR_zV_y\right)\kh\\
+	+& \left(R_wR_yV_y + R_y^2V_w + R_yR_zV_x - R_xR_yV_z\right)
+	+  \left(R_wR_yV_z + R_yR_zV_w + R_xR_yV_y - R_y^2V_x\right)\ih
+	\\
+	-& \left(R_wR_zV_w - R_xR_zV_x - R_yR_zV_y - R_z^2V_z\right)\kh
+	+  \left(R_wR_zV_x + R_xR_zV_w + R_yR_zV_z - R_z^2V_y\right)\jh\\
+	-& \left(R_wR_zV_y + R_yR_zV_w + R_z^2V_x - R_xR_zV_z\right)\ih
+	+  \left(R_wR_zV_z + R_z^2V_w + R_xR_zV_y - R_yR_zV_x\right)
+\end{align*}
+
+\begin{align*}
+Q_RQ_VQ_R^* = 
+	 & \left(R_w^2V_w - R_wR_xV_x - R_wR_yV_y - R_wR_zV_z\right)
+	+  \left(R_w^2V_x + R_wR_xV_w + R_wR_yV_z - R_wR_zV_y\right)\ih\\
+	+& \left(R_w^2V_y + R_wR_yV_w + R_wR_zV_x - R_wR_xV_z\right)\jh
+	+  \left(R_w^2V_z + R_wR_zV_w + R_wR_xV_y - R_wR_yV_x\right)\kh
+	\\
+	+& \left(-R_wR_xV_w + R_x^2V_x + R_xR_yV_y + R_xR_zV_z\right)\ih
+	+  \left(R_wR_xV_x + R_x^2V_w + R_xR_yV_z - R_xR_zV_y\right)\\
+	+& \left(R_wR_xV_y + R_xR_yV_w + R_xR_zV_x - R_x^2V_z\right)\kh
+	+  \left(-R_wR_xV_z - R_xR_zV_w - R_x^2V_y + R_xR_yV_x\right)\jh
+	\\
+	+& \left(-R_wR_yV_w + R_xR_yV_x + R_y^2V_y + R_yR_zV_z\right)\jh
+	+  \left(-R_wR_yV_x - R_xR_yV_w - R_y^2V_z + R_yR_zV_y\right)\kh\\
+	+& \left(R_wR_yV_y + R_y^2V_w + R_yR_zV_x - R_xR_yV_z\right)
+	+  \left(R_wR_yV_z + R_yR_zV_w + R_xR_yV_y - R_y^2V_x\right)\ih
+	\\
+	+& \left(-R_wR_zV_w + R_xR_zV_x + R_yR_zV_y + R_z^2V_z\right)\kh
+	+  \left(R_wR_zV_x + R_xR_zV_w + R_yR_zV_z - R_z^2V_y\right)\jh\\
+	+& \left(-R_wR_zV_y - R_yR_zV_w - R_z^2V_x + R_xR_zV_z\right)\ih
+	+  \left(R_wR_zV_z + R_z^2V_w + R_xR_zV_y - R_yR_zV_x\right)
+\end{align*}
+
+\begin{align*}
+Q_RQ_VQ_R^* = \Big(
+	 & R_w^2V_w - R_wR_xV_x - R_wR_yV_y - R_wR_zV_z
+	+  R_wR_xV_x + R_x^2V_w + R_xR_yV_z - R_xR_zV_y\\
+	+& R_wR_yV_y + R_y^2V_w + R_yR_zV_x - R_xR_yV_z
+	+  R_wR_zV_z + R_z^2V_w + R_xR_zV_y - R_yR_zV_x
+	\Big)\\+\Big(
+	 & R_w^2V_x + R_wR_xV_w + R_wR_yV_z - R_wR_zV_y
+	-  R_wR_xV_w + R_x^2V_x + R_xR_yV_y + R_xR_zV_z\\
+	+& R_wR_yV_z + R_yR_zV_w + R_xR_yV_y - R_y^2V_x
+	-  R_wR_zV_y - R_yR_zV_w - R_z^2V_x + R_xR_zV_z
+	\Big)\ih\\+\Big(
+	 & R_w^2V_y + R_wR_yV_w + R_wR_zV_x - R_wR_xV_z
+	-  R_wR_xV_z - R_xR_zV_w - R_x^2V_y + R_xR_yV_x\\
+	-& R_wR_yV_w + R_xR_yV_x + R_y^2V_y + R_yR_zV_z
+	+  R_wR_zV_x + R_xR_zV_w + R_yR_zV_z - R_z^2V_y
+	\Big)\jh\\+\Big(
+	 & R_w^2V_z + R_wR_zV_w + R_wR_xV_y - R_wR_yV_x
+	+  R_wR_xV_y + R_xR_yV_w + R_xR_zV_x - R_x^2V_z\\
+	-& R_wR_yV_x - R_xR_yV_w - R_y^2V_z + R_yR_zV_y
+	-  R_wR_zV_w + R_xR_zV_x + R_yR_zV_y + R_z^2V_z\Big)\kh
+\end{align*}
+
+\begin{align*}
+Q_RQ_VQ_R^* =
+	&\Big(
+	 V_w(R_w^2 + R_x^2 + R_y^2 + R_z^2)
+	\Big)\\
+	  +&\Big(
+	   V_x(R_w^2 + R_x^2 - R_y^2 - R_z^2)
+	  + 2V_y(R_xR_y - 2R_wR_z)
+	  + 2V_z(R_wR_y + 2R_xR_z)
+	\Big)\ih\\
+	+&\Big(
+	    2V_x(R_wR_z + 2R_xR_y)
+	  +  V_y(R_w^2 - R_x^2 + R_y^2 - R_z^2)
+	  + 2V_z(R_yR_z - 2R_wR_x)
+	\Big)\jh\\
+	+&\Big(
+	    2V_x(R_xR_z - R_wR_y)
+	  + 2V_y(R_wR_x + R_yR_z)
+	  +  V_z(R_w^2 - R_x^2 - R_y^2 + R_z^2
+	\Big)\kh
+\end{align*}
+
+Now if we plug in the Unit Vectors for $x$,$y$ and $z$, we can construct the a general matrix conversion.
+\begin{multicols}{3}
+$Q_x=0+1\ih+0\jh+0\kh=\ih$
+\columnbreak
+$Q_y=0+0\ih+1\jh+0\kh=\jh$
+\columnbreak
+$Q_z=0+0\ih+0\jh+1\kh=\kh$
+\columnbreak
+\end{multicols}
+
+\begin{align*}
+Q_RQ_xQ_R^* =
+	&\Big(
+	 0 \cdot (R_w^2 + R_x^2 + R_y^2 + R_z^2)
+	\Big)\\
+	+&\Big(
+	           1 \cdot (R_w^2 + R_x^2 - R_y^2 - R_z^2)
+	 + 2 \cdot 0 \cdot (R_xR_y - R_wR_z)
+	 + 2 \cdot 0 \cdot (R_wR_y + R_xR_z)
+	\Big)\ih\\
+	+&\Big(
+	   2 \cdot 1 \cdot (R_wR_z + R_xR_y)
+	 +         0 \cdot (R_w^2 - R_x^2 + R_y^2 - R_z^2)
+	 + 2 \cdot 0 \cdot (R_yR_z - R_wR_x)
+	\Big)\jh\\
+	+&\Big(
+	   2 \cdot 1 \cdot (R_xR_z - R_wR_y)
+	 + 2 \cdot 0 \cdot (R_wR_x + R_yR_z)
+	 +         0 \cdot (R_w^2 - R_x^2 - R_y^2 + R_z^2)
+	\Big)\kh
+\end{align*}
+
+\begin{align*}
+Q_RQ_xQ_R^* =
+	   (R_w^2 + R_x^2 - R_y^2 - R_z^2)\ih
+	+ 2(R_wR_z + 2R_xR_y)\jh
+	+ 2(R_xR_z - R_wR_y)\kh
+\end{align*}
+
+\begin{align*}
+Q_RQ_yQ_R^* =
+	&\Big(
+	 0 \cdot (R_w^2 + R_x^2 + R_y^2 + R_z^2)
+	\Big)\\
+	+&\Big(
+	           0 \cdot (R_w^2 + R_x^2 - R_y^2 - R_z^2)
+	 + 2 \cdot 1 \cdot (R_xR_y - R_wR_z)
+	 + 2 \cdot 0 \cdot (R_wR_y + R_xR_z)
+	\Big)\ih\\
+	+&\Big(
+	   2 \cdot 0 \cdot (R_wR_z + R_xR_y)
+	 +         1 \cdot (R_w^2 - R_x^2 + R_y^2 - R_z^2)
+	 + 2 \cdot 0 \cdot (R_yR_z - R_wR_x)
+	\Big)\jh\\
+	+&\Big(
+	   2 \cdot 0 \cdot (R_xR_z - R_wR_y)
+	 + 2 \cdot 1 \cdot (R_wR_x + R_yR_z)
+	 +         0 \cdot (R_w^2 - R_x^2 - R_y^2 + R_z^2)
+	\Big)\kh
+\end{align*}
+
+\begin{align*}
+Q_RQ_yQ_R^* =
+	  2(R_xR_y - R_wR_z)\ih
+	+  (R_w^2 - R_x^2 + R_y^2 - R_z^2)\jh
+	+ 2(R_wR_x + R_yR_z)\kh
+\end{align*}
+
+\begin{align*}
+Q_RQ_zQ_R^* =
+	&\Big(
+	 0 \cdot (R_w^2 + R_x^2 + R_y^2 + R_z^2)
+	\Big)\\
+	+&\Big(
+	           0 \cdot (R_w^2 + R_x^2 - R_y^2 - R_z^2)
+	 + 2 \cdot 0 \cdot (R_xR_y - R_wR_z)
+	 + 2 \cdot 1 \cdot (R_wR_y + R_xR_z)
+	\Big)\ih\\
+	+&\Big(
+	   2 \cdot 0 \cdot (R_wR_z + R_xR_y)
+	 +         0 \cdot (R_w^2 - R_x^2 + R_y^2 - R_z^2)
+	 + 2 \cdot 1 \cdot (R_yR_z - R_wR_x)
+	\Big)\jh\\
+	+&\Big(
+	   2 \cdot 0 \cdot (R_xR_z - R_wR_y)
+	 + 2 \cdot 0 \cdot (R_wR_x + R_yR_z)
+	 +         1 \cdot (R_w^2 - R_x^2 - R_y^2 + R_z^2)
+	\Big)\kh
+\end{align*}
+
+\begin{align*}
+Q_RQ_zQ_R^* =
+	  2(R_wR_y + 2R_xR_z)\ih
+	+ 2(R_yR_z - 2R_wR_x)\jh
+	+  (R_w^2 - R_x^2 - R_y^2 + R_z^2)\kh
+\end{align*}
+
+$$
+\begin{bmatrix}
+R_w^2 + R_x^2 - R_y^2 - R_z^2 & 2(R_xR_y - R_wR_z) & 2(R_wR_y + R_xR_z)\\
+2(R_wR_z + R_xR_y) & R_w^2 - R_x^2 + R_y^2 - R_z^2 & 2(R_yR_z - R_wR_x)\\
+2(R_xR_z - R_wR_y) & 2(R_wR_x + R_yR_z) & R_w^2 - R_x^2 - R_y^2 + R_z^2
+\end{bmatrix}
+$$

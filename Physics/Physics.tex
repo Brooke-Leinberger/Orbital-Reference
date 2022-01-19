@@ -1,0 +1,211 @@
+
+%\newcommand{\e}{\textcolor{black}{e}}
+%\newcommand{\latus}{\textcolor{purple}{l}}
+%\newcommand{\peri}{\textcolor{orange}{p}}
+%\newcommand{\vel}{\textcolor{OliveGreen}{v}}
+%\newcommand{\rad}{\textcolor{teal}{r}}
+%\newcommand{\Grav}{\textcolor{black}{G}}
+%\newcommand{\stg}{\textcolor{magenta}{\mu}}
+%\newcommand{\true}{\textcolor{black}{\theta_t}}
+%\newcommand{\hv}{\textcolor{purple}{h}}
+
+\chapter{Physics}
+\section{Direction from Change in Position}
+At any given point, for a non-zero velocity, the Change in Position has only one direction. Therefore, the Change in Position with respect to time (aka, Velocity) and the Change in Position with respect to $\true$ must share a common direction if they're at the same point.\\\\
+\begin{minipage}{\textwidth}
+\begin{multicols}{2}
+\raggedcolumns
+\noindent
+$$\rad = \frac{\latus}{\textcolor{black}{e}\cos{\true} + 1}$$
+$$\vec{\rad} = (\vec{\rad}_x, \vec{\rad}_y)$$
+\columnbreak
+$$\vec{\vel} = \frac{d\rad}{dt}$$
+$$\vec{\vel}=\vel\cdot\hat{\vel}$$
+$$\hat{\vel}=\frac{(d\vec{\rad}_x,d\vec{\rad}_y)}{\sqrt{d\vec{\rad}_x^2+d\vec{\rad}_y^2}}$$
+\end{multicols}
+\end{minipage}
+\bigskip
+%\bigskip
+
+\begin{minipage}{\textwidth}
+\bigskip
+\small
+\begin{multicols}{2}
+\raggedcolumns
+\noindent
+$$\vec{\rad}_x=\rad\cdot\cos{\true}$$
+$$d\vec{\rad}_x=\frac{d}{d\true}\left[\frac{\latus\cos{\true}}{\e\cos{\true}+1}\right]$$
+$$d\vec{\rad}_x=\frac{(-\latus\sin{\true})(\e\cos{\true}+1)-(\latus\cos{\true})(-\e\sin{\true})}{(\e\cos{\true}+1)^2}$$
+$$d\vec{\rad}_x=\frac{-\latus\sin{\true}}{(\e\cos{\true}+1)^2}$$
+$$d\vec{\rad}_x=\frac{\latus}{\e\cos{\true}+1}\cdot\frac{-\sin{\true}}{\e\cos{\true}+1}$$
+$$d\vec{\rad}_x=\rad\cdot\frac{-\sin{\true}}{\e\cos{\true}+1}$$
+\columnbreak
+$$\vec{\rad}_y=\rad\cdot\sin{\true}$$
+$$d\vec{\rad}_y=\frac{d}{d\true}\left[\frac{\latus\sin{\true}}{\e\cos{\true}+1}\right]$$
+$$d\vec{\rad}_y=\frac{(\latus\cos{\true})(\e\cos{\true}+1)-(\latus\sin{\true})(-\e\sin{\true})}{(\e\cos{\true}+1)^2}$$
+$$d\vec{\rad}_y=\frac{\latus\e(\cos^2{\true}+\sin^2{\true})+\latus\cos{\true}} {(\e\cos{\true}+1)^2}$$
+$$d\vec{\rad}_y=\frac{\latus}{\e\cos{\true}+1}\cdot\frac{(\cos{\true} + \e)} {\e\cos{\true}+1}$$
+$$d\vec{\rad}_y=\rad\cdot\frac{\cos{\true}+\e} {\e\cos{\true}+1}$$
+\columnbreak
+\end{multicols}
+\end{minipage}
+\newpage
+\small
+$$\hat{\vel}=\frac{\left(\rad\cdot\frac{-\sin{\true}}{\e\cos{\true}+1},\rad\cdot\frac{\cos{\true}+\e} {\e\cos{\true}+1}\right)}{\sqrt{\left(\rad\cdot\frac{-\sin{\true}}{\e\cos{\true}+1}\right)^2+\left(\rad\cdot\frac{\cos{\true}+\e} {\e\cos{\true}+1}\right)^2}}$$
+
+$$\hat{\vel}=\frac{\rad\left(\frac{-\sin{\true}}{\e\cos{\true}+1},\frac{\cos{\true}+\e} {\e\cos{\true}+1}\right)}{\rad\sqrt{\left(\frac{-\sin{\true}}{\e\cos{\true}+1}\right)^2+\left(\frac{\cos{\true}+\e}{\e\cos{\true}+1}\right)^2}}$$
+
+$$\hat{\vel}=\frac{(\e\cos{\true}+1)^{-1}(-\sin{\true},\cos{\true}+\e)} {(\e\cos{\true}+1)^{-1}\sqrt{(-\sin{\true})^2+(\cos{\true}+\e)^2}}$$
+
+$$\hat{\vel}=\frac{(-\sin{\true},\cos{\true}+\e)} {\sqrt{\sin^2{\true}+\cos^2{\true}+2\e\cos{\true} + \e^2}}$$
+
+$$\hat{\vel}=\frac{(-\sin{\true},\cos{\true}+\e)} {\sqrt{\e^2+2\e\cos{\true}+1}}$$
+\normalsize
+\section{Angular Momentum}
+
+Orbiting bodies in this physical model (without perturbations) experience no torque, as the only force they experience is gravity, which is parallel with their radius vector. Since it does not experience a torque, Angular Momentum must be conserved.
+
+Since Angular Momentum is conserved, that means it must remain constant for the entirety of the orbit. It must also mean \textbf{Specific Angular Momentum ($\hv$)} is conserved, or Angular Momentum per Unit Mass. This allows for ignoring mass in calculations. 
+
+Specific Angular Momentum is the cross product of radius and velocity. Because radius and velocity vectors are both on the $x$-$y$/$\theta$-$r$ plane, we can simplify cross product to the determinant.
+
+$$\hv_{\peri}=\vec{\rad} \times \vec{\vel}=\vec{\rad}_x \cdot \vec{\vel}_y-\vec{\rad}_y \cdot \vec{\vel}_x$$
+\begin{adjustwidth}{-4em}{-4em}
+\begin{minipage}{\linewidth}
+\begin{multicols}{2}
+\raggedcolumns
+\scriptsize
+$$\hv_{\peri}=(\peri\cos{\true})\left(\vel_{\peri}\cdot\frac{\cos{\true}+\e}{\sqrt{\e^2+2\e\cos{\true}+1}}\right)-(\peri\sin{\true})\left(\vel_{\peri}\cdot\hat{\vel}_y\right)$$
+
+$$\hv_{\peri}=(\peri\cos{0})\left(\vel_{\peri}\cdot\frac{\cos{0}+\e}{\sqrt{\e^2+2\e\cos{0}+1}}\right)-(\peri\sin{0})\left(\vel_{\peri}\cdot\hat{\vel}_y\right)$$
+
+$$\hv_{\peri}=\left(\peri\vel_{\peri}\cdot\frac{1+\e}{\sqrt{\e^2+2\e+1}}\right)-(0)\left(\vel_{\peri}\cdot\hat{\vel}_y\right)$$
+
+$$\hv_{\peri}=\left(\peri\vel_{\peri}\cdot\frac{1+\e}{\sqrt{(\e+1)^2}}\right)$$
+
+$$\hv_{\peri}=\peri\vel_{\peri}$$
+\columnbreak
+
+$$\hv_{\latus}=\left(\latus\cos{\true}\right)\left(\vel_{\latus}\cdot\hat{\vel}_x\right)-\left(\latus\sin{\true}\right)\left(\vel_{\latus}\cdot\frac{-\sin{\true}}{\sqrt{\e^2+2\e\cos{\true}+1}}\right)$$
+
+$$\hv_{\latus}=\left(\latus\cos{\left(\frac{\pi}{2}\right)}\right)\left(\vel_{\latus}\cdot\hat{\vel}_x\right)-\left(\latus\sin{\left(\frac{\pi}{2}\right)}\right)\left(\vel_{\latus}\cdot\frac{-\sin{(\frac{\pi}{2})}}{\sqrt{\e^2+2\e\cos{(\frac{\pi}{2})}+1}}\right)$$
+
+$$\hv_{\latus}=(0)\left(\vel_{\latus}\cdot\hat{\vel}_x\right)-(\latus)\left(\vel_{\latus}\cdot\frac{-1}{\sqrt{\e^2+1}}\right)$$
+
+$$\hv_{\latus}=\frac{\latus\vel_{\latus}}{\sqrt{1+\e^2}}$$
+\columnbreak
+\end{multicols}
+\end{minipage}
+\end{adjustwidth}
+\scriptsize
+$$\hv=\peri\vel_{\peri}=\frac{\latus\vel_{\latus}}{\sqrt{1+\e^2}}$$
+$$\latus = \peri(1+\e)$$
+$$\peri\vel_{\peri}=\frac{\peri(1+\e)\vel_{\latus}}{\sqrt{(1+\e)(1-\e)}}$$
+$$\vel_{\peri}=\frac{(1+\e)\vel_{\latus}}{\sqrt{1+\e^2}}$$
+\normalsize
+
+\section{Total Energy and Velocity}
+Similarly to Conservation of Special Angular Momentum, \textbf{Conservation of Specific Energy} can be used to calculate the speed of the object orbiting. Together with direction, a velocity vector can be constructed. Like Specific Angular Momentum, Specific Energy ($\epsilon_\text{t}$) is constant throughout the orbit, even though its components change. It's equal to the sum of Specific Kinetic Energy ($\epsilon_\text{k}$) and Specific Gravitational Potential Energy ($\epsilon_\text{gp}$).
+
+
+\begin{minipage}{\textwidth}
+\begin{multicols}{2}
+
+$$\epsilon_\text{t}=\epsilon_{k} + \epsilon_{gp}$$
+$$\epsilon_{k} = \frac{1}{2}\vel^2$$
+$$\epsilon_{gp} = \int_{0}^{\rad}\left(\frac{\mu}{\rad^2}\right)d\rad$$
+$$\epsilon_{gp} = \frac{-\mu}{\rad}$$
+
+$$\epsilon_\text{t}= \frac{\vel^2}{2} - \frac{\stg}{\rad}$$
+$$\epsilon_\text{t} = \frac{\vel_{\latus}^2}{2} - \frac{\stg}{\latus} = \frac{\vel_{\peri}^2}{2} - \frac{\stg}{\peri}$$
+$$\frac{\vel_{\latus}^2}{2}-\frac{\vel_{\peri}^2}{2} = \frac{\stg}{\latus} - \frac{\stg}{\peri}$$
+$$\vel_{\latus}^2-\left(\frac{\vel_{\latus}(1+\e)}{\sqrt{1+\e^2}}\right)^2 = 2\stg\left(\frac{1}{\latus} - \frac{1+\e}{\latus}\right)$$
+$$\vel_{\latus}^2\left(1-\frac{(1+\e)^2}{1+\e^2}\right) = 2\stg\left(\frac{-\e}{\latus}\right)$$
+$$\vel_{\latus}^2\cdot\frac{(1+\e^2)-(1+\e)^2}{1+\e^2} = 2\stg(\frac{-\e}{\latus})$$
+$$\vel_{\latus}^2\cdot\frac{1+\e^2-1-2\e-\e^2}{1+\e^2} = 2\stg\left(\frac{-\e}{\latus}\right)$$
+$$\vel_{\latus}^2\cdot\frac{-2\e}{1+\e^2} = 2\stg\left(\frac{-\e}{\latus}\right)$$
+
+$$\vel_{\latus}^2 = 2\stg\left(\frac{-\e}{\latus}\right)\left(\frac{1+\e^2}{-2\e}\right)$$
+$$\vel_{\latus} = \sqrt{\stg\left(\frac{1+\e^2}{\latus}\right)}$$
+
+\columnbreak
+
+$$\epsilon_\text{t} = \frac{\vel_{\latus}^2}{2} - \frac{\stg}{\latus}$$
+$$\epsilon_\text{t} = \frac{\left(\sqrt{\stg\left(\frac{1+\e^2}{\latus}\right)}\right)^2}{2} - \frac{\stg}{\latus}$$
+$$\epsilon_\text{t} = \frac{\stg\left(\frac{1+\e^2}{\latus}\right)}{2} - \frac{\stg}{\latus}$$
+$$\epsilon_\text{t} = \frac{\stg(1+\e^2)}{2\latus} - \frac{2\stg}{2\latus}$$
+
+$$\epsilon_\text{t} = \frac{\stg(\e^2-1)}{2\latus}$$
+
+$$\epsilon_\text{t}=\epsilon_{k} + \epsilon_{gp}$$
+$$\frac{\stg(\e^2-1)}{2\latus}=\frac{\vel^2}{2} + \frac{-\stg}{\rad}$$
+$$\frac{\stg(\e^2-1)}{\latus}=\vel^2 + \frac{-2\stg}{\rad}$$
+
+$$\vel^2=\frac{\stg(\e^2-1)}{\latus}+\frac{2\stg}{\rad}$$
+$$\vel=\sqrt{\stg\left(\frac{2}{\rad}+\frac{\e^2-1}{\latus}\right)}$$
+
+$$\hv=\peri\vel_{\peri}=\peri\sqrt{\stg\left(\frac{2}{\peri}+\frac{\e^2-1}{\latus}\right)}$$
+$$\hv=\peri\vel_{\peri}=\peri\sqrt{\stg\left(\frac{2(1+\e)}{\latus}+\frac{\e^2-1}{\latus}\right)}$$
+
+$$\hv=\frac{\latus}{1+\e}\sqrt{\stg\left(\frac{1+2\e+\e^2}{\latus}\right)}$$
+$$\hv=\sqrt{\latus\stg}$$
+\end{multicols}
+\end{minipage}
+\newpage
+
+\section{Areal Velocity}
+The final physics piece in the puzzle is Areal Velocity. Once this is established, it becomes possible to determine angular displacement based on a given passage of time. The area covered by an orbiting body in an infinitesimal amount of time can be closely modeled by a triangle. A convenient property of the cross product of two vectors is that the resulting magnitude equals the area made by a parallelogram, with side lengths equaling to the two vectors. The area of a triangle with the same side lengths is simply half that of the parallelogram.
+
+If the first vector is the initial position $\rad$, and the second vector is the displacement vector $d$, then their area is $$\Delta A=\frac{\rad \times d}{2}$$ 
+Further, the displacement can be rewritten as the product of a velocity and a time over which the displacement occurred.
+$$\Delta A=\frac{\rad \times \left(\vel\cdot\Delta t\right)}{2}$$
+And Finally, the Areal Velocity can be determined by dividing by the same time step.
+$$\Delta A=\frac{\rad \times \left(\vel\cdot\Delta t\right)}{2\Delta t}$$
+$$\Delta A=\frac{\rad \times \vel}{2}\cdot\left(\frac{\Delta t}{\Delta t}\right)$$
+$$\Delta A=\frac{\rad \times \vel}{2}=\frac{\hv}{2}$$ 
+$$\Delta A=\frac{\sqrt{\latus\stg}}{2}$$
+As we can see, Areal velocity is simply just half of the Specific Angular Momentum of an orbiting body.
+
+Unfortunately, there is no way to analytically solve for angular displacement, as the Area formulae derived in the Area Section of the Geometry chapter (Sections 2.5 and 2.6) are not analytically solvable for $\true$. It can be done numerically, however.
+\newpage
+\section{Change in Position Over Time}
+While a convenient, analytic solution does not exist for determining position as a function of time, it is possible to calculate it numerically, using an iterative approach. The Newton-Raphson Method is ideal for this scenario, as the derivative of area ($\rad^2$) never equals zero and should no overshoot as both the Area formula and the derivative are continuous. The following iterative formula should work for the Newton-Raphson Method.
+\\
+\textbf{Let:}
+\begin{itemize}
+\item $A(\true)$ : The area function for this orbit
+\item $X$ : Terminating condition
+\item $T$ : Target area
+\item $\theta_0$ : The true anomaly of the initial position.
+\item $\Delta t$ : The elapsed time passed since the orbiting body was at the initial position, in seconds
+\end{itemize}
+ 
+Firstly, set a target area to iterate towards. This is simply set by summing the area corresponding to the initial position with the expected change in area. Ensure that $T$ is within the domain of the orbit.
+
+$$T = A(\true) + \Delta A \cdot \Delta t$$
+
+Next, determine the terminating condition. The method used here will have it set so that the position is accurate down to the nearest millisecond, however this can be variable..
+
+$$X = \Delta A \cdot 10^{-3}s$$
+
+Whenever the absolute value of the difference between target area and the calculated area is less than $T$, we can terminate the iterative process. Lastly in the setup, all that's left is an initial guess. The initial position is a very good place to start.
+\\\\
+\begin{adjustwidth}{16em}{}
+\textbf{While $X < |A(\theta_n)-T|$}\\[7.5pt]
+\bigskip
+\indent\indent $\theta_{n+1} = \theta_n - \frac{A(\theta_n)-T}{\rad(\theta_n)^2}$
+
+\end{adjustwidth}
+
+\bigskip
+\bigskip
+
+For those more familiar with pseudo-code:
+\\\\
+\begin{adjustwidth}{8em}{}
+$\true = \theta_0$\\[7.5pt]
+While $X$ is less than the absolute difference between $A(\true)$ and $T$\\[7.5pt]
+\indent\indent\text{Calculate the next iteration of $\true$:}\\[5pt]
+\indent\indent $\true = \true - \frac{A(\true)-T}{\rad(\true)^2}$ 
+
+\end{adjustwidth}

@@ -1,0 +1,90 @@
+\subsubsection{Radius As True Anomaly}
+\begin{center}
+\begin{tikzpicture}
+    \centering
+    \newcommand{\da}{5}
+    \newcommand{\db}{3}
+    \newcommand{\dc}{4}
+    \newcommand{\dl}{1.8}
+    
+    \draw (0,0) ellipse (\da cm and \db cm);
+    \draw[orange] (\dc,0) -- (\da,0);
+    \draw[red] (-6.814+\dc,0) -- (-6.814+\dc,2.48);
+    \draw[blue](-6.814+\dc,0) -- (\dc,0);
+    \draw[teal] (-6.814+\dc,2.48) -- (\dc, 0);
+    \draw[purple, thick] (\dc,0) -- (\dc,\dl);
+    \scriptsize
+    
+    \coordinate (p) at (\da, 0);
+    \coordinate (f) at (\dc, 0);
+    \coordinate (r) at (-6.814 + \dc, 2.48);
+    
+    \pic [draw=RoyalPurple, ->, anchor = north west,  "\textcolor{RoyalPurple}{$\theta_t$}", angle eccentricity=1.5] {angle = p--f--r};
+    \filldraw [black] (\dc,0) circle (1pt) node[anchor = north east] {prime focus};
+    \normalsize
+    \node[anchor = north] at (-6.814/2 + \dc, 0) {\textcolor{blue}{$x$}};
+    \node[anchor = east] at (-6.814 + \dc, 2.48/2) {\textcolor{red}{$y$}};
+    \node[anchor = east] at (\dc, \dl / 2) {\textcolor{purple}{$l$}};
+    \node[anchor = south west] at (-6.814/2 + \dc, 2.48 / 2) {\textcolor{teal}{$r_1$}};
+    \node[anchor = north] at (\dc / 2 +\da / 2, 0) {\textcolor{orange}{$p$}};
+\end{tikzpicture}
+\end{center}
+
+Defining a function for radius using True Anomaly is a pretty straight forward process. Since these models of orbits always have:
+\begin{itemize}
+    \item Periapsis directly to the right of the primary focus, on the $x$ axis;
+    \item True Anomaly is defined as zero at periapsis;
+    \item True Anomaly is measured counter clockwise (the direction of motion for all of these models);
+\end{itemize}
+\bigskip
+
+So it's just a straight foward conversion from Cartesisan to Polar coordinates.
+
+$$\text{Standard Ellipse Formula: } \left(\frac{x}{\textcolor{blue}{a}}\right)^2 + \left(\frac{y}{\textcolor{red}{b}}\right)^2 = 1$$
+$$\text{Focus-Offset Ellipse Formula: } \left(\frac{x+\textcolor{OliveGreen}{c}}{\textcolor{blue}{a}}\right)^2 + \left(\frac{y}{\textcolor{red}{b}}\right)^2 = 1$$
+
+$$\frac{(x+\textcolor{OliveGreen}{c})^2}{\textcolor{blue}{a}^2} + \frac{y^2}{\textcolor{red}{b}^2} = 1$$
+$$\textcolor{red}{b}^2\frac{(x+\textcolor{OliveGreen}{c})^2}{\textcolor{blue}{a}^2} + y^2 = \textcolor{red}{b}^2$$
+$$\textcolor{black}{s}(x+\textcolor{OliveGreen}{c})^2 + y^2 = \textcolor{red}{b}^2$$
+$$\textcolor{black}{s}(x^2+ 2x\textcolor{OliveGreen}{c} +\textcolor{OliveGreen}{c}^2) + y^2 - \textcolor{red}{b}^2 = 0$$
+$$\textcolor{black}{s}x^2+ y^2+ 2x\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s} +\textcolor{blue}{a}^2\textcolor{black}{e}^2\textcolor{black}{s} - \textcolor{blue}{a}^2\textcolor{black}{s} = 0$$
+$$\textcolor{black}{s}(\textcolor{teal}{r_1}\cos{\textcolor{black}{\theta_t}})^2+ (\textcolor{teal}{r_1}\sin{\textcolor{black}{\theta_t}})^2+ 2(\textcolor{teal}{r_1}\cos{\textcolor{black}{\theta_t}})\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s} +\textcolor{blue}{a}^2\textcolor{black}{s}(\textcolor{black}{e}^2 - 1) = 0$$
+$$\textcolor{teal}{r_1}^2(\textcolor{black}{s}\cos^2{\textcolor{black}{\theta_t}} + \sin^2{\textcolor{black}{\theta_t}})+ \textcolor{teal}{r_1}(2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}) +(-\textcolor{blue}{a}^2\textcolor{black}{s}^2) = 0$$
+$$\textcolor{teal}{r_1}^2(\cos^2{\textcolor{black}{\theta_t}} - \textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} + \sin^2{\textcolor{black}{\theta_t}})+ \textcolor{teal}{r_1}(2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}) +(-\textcolor{blue}{a}^2\textcolor{black}{s}^2) = 0$$
+$$\textcolor{teal}{r_1}^2(1 - \textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}})+ \textcolor{teal}{r_1}(2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}) +(-\textcolor{blue}{a}^2\textcolor{black}{s}^2) = 0$$
+$$\textcolor{teal}{r_1}^2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - 1)+ \textcolor{teal}{r_1}(-2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}) +(\textcolor{blue}{a}^2\textcolor{black}{s}^2) = 0$$
+\\
+$$\textcolor{teal}{r_1} = \frac{2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}\pm\sqrt{(-2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}})^2 - 4(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}}-1)(\textcolor{blue}{a}^2\textcolor{black}{s}^2)}}{2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}}-1)}$$
+
+$$\textcolor{teal}{r_1} = \frac{2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}\pm\sqrt{4\textcolor{blue}{a}^2\textcolor{black}{s}^2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}}) + 4\textcolor{blue}{a}^2\textcolor{black}{s}^2(1-\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}})}}{2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}}-1)}$$
+
+$$\textcolor{teal}{r_1} = \frac{2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}} \pm2\textcolor{blue}{a}\textcolor{black}{s}\sqrt{(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}}) + (1-\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}})}}{2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}}-1)}$$
+
+$$\textcolor{teal}{r_1} =  \frac{\textcolor{blue}{a}\textcolor{black}{s}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} \pm\sqrt{1})}{\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - 1^2}$$
+
+%$$\textcolor{teal}{r_1} = \frac{\textcolor{blue}{a}\textcolor{black}{s}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} \pm 1)}{(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}$$
+
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} \pm 1)}{(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}$$
+
+\bigskip
+\begin{multicols}{2}
+\raggedcolumns
+\noindent
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}{(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}$$
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1}$$
+$$\textcolor{orange}{p} = \frac{\textcolor{blue}{a}(1+\textcolor{black}{e})(1-\textcolor{black}{e})}{\textcolor{black}{e}\cos{0} - 1}$$
+$$\textcolor{orange}{p} = \frac{-\textcolor{blue}{a}(1+\textcolor{black}{e})(\textcolor{black}{e}-1)}{\textcolor{black}{e} - 1}$$
+$$\textcolor{orange}{p} = -\textcolor{blue}{a}(1+\textcolor{black}{e})$$
+\centering
+\textcolor{red}{[REJECT]}
+\columnbreak
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)}{(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}$$
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$$
+$$\textcolor{orange}{p} = \frac{\textcolor{blue}{a}(1+\textcolor{black}{e})(1-\textcolor{black}{e})}{\textcolor{black}{e}\cos{0} + 1}$$
+$$\textcolor{orange}{p} = \frac{\textcolor{blue}{a}(1+\textcolor{black}{e})(1-\textcolor{black}{e})}{\textcolor{black}{e} + 1}$$
+$$\textcolor{orange}{p} = \textcolor{blue}{a}(1-\textcolor{black}{e})$$
+\centering
+\textcolor{green}{[ACCEPT]}
+\end{multicols}
+
+$$\text{Ellipse Primary Radius Formula: }\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$$

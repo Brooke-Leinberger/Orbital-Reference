@@ -1,0 +1,94 @@
+\subsubsection{Radius As True Anomaly}
+\begin{center}
+\begin{tikzpicture}
+    \newcommand{\es}{1}
+    \newcommand{\scale}{1}
+    \newcommand{\asymptote}{180}
+    \newcommand{\offset}{60}
+    \newcommand{\ch}{1}
+    \newcommand{\lh}{2}
+    \newcommand{\xh}{-1.2826}
+    \newcommand{\yh}{3.02167}
+    \newcommand{\dir}{3.4641}
+    %periapsis set to 1
+    \tiny
+    \filldraw [black] (0,0) circle (1pt) node[anchor = north] {prime focus};
+    \filldraw [black] (\xh * \scale,\yh * \scale) circle (1pt) node[anchor = north east] {$h$};
+    \draw[domain= -(\asymptote - \offset): (\asymptote - \offset),scale=\scale,samples=500] plot (\x:{\lh / (\es * cos(\x) + 1)});
+    
+    \draw [teal] (\xh * \scale, \yh * \scale) -- (0,0);
+    \draw [brown] (\xh * \scale, \yh * \scale) -- (2 *\scale, \yh * \scale);
+    \draw [orange] (0,0) -- (\ch * \scale,0);
+    \draw [purple] (0,0) -- (0, \lh * \scale);
+    \draw [black,<->] (2 * \scale, \dir * \scale) -- (2 * \scale, -\dir * \scale);
+    \draw [blue] (\xh * \scale,0) -- (0,0);
+    \draw [red]  (\xh * \scale,0) -- (\xh * \scale,\yh * \scale);
+    
+    
+    \node[anchor = south west] at (0.5 * \xh * \scale, 0.5 * \yh * \scale) {\textcolor{teal}{$r_1$}};
+    \node[anchor = north] at (0.5 * \xh * \scale + \scale, \yh * \scale) {\textcolor{brown}{$r_2$}};
+    \node[anchor = south east] at (.75 * \ch * \scale, 0) {\textcolor{orange}{$p$}};
+    \node[anchor = west] at (0, \lh * \scale * 0.5) {\textcolor{purple}{$l$}};
+    \node[anchor = east] at (\xh * \scale, 0.5 * \yh * \scale) {\textcolor{red}{$y$}};
+    \node[anchor = south] at (0.5 \xh * \scale,0) {\textcolor{blue}{$x$}};
+    \normalsize
+\end{tikzpicture}
+\end{center}
+
+Defining a function for radius using True Anomaly is a pretty straight forward process. Since these model of orbits always have:
+\begin{itemize}
+    \item Periapsis directly to the right of the primary focus, on the $x$ axis;
+    \item True Anomaly is defined as zero at periapsis;
+    \item True Anomaly is measured counter clockwise (the direction of motion for all of these models);
+\end{itemize}
+So it's just a straight forward conversion from Cartesian to Polar coordinates.
+
+$$\text{Standard Parabola Formula: }  y^2=-4\textcolor{orange}{p}x$$
+$$\text{Focus-Offset Parabola Formula: } y^2=-4\textcolor{orange}{p}(x-\textcolor{orange}{p})$$
+$$y^2+4\textcolor{orange}{p}(x-\textcolor{orange}{p})=0$$
+$$y^2+4\textcolor{orange}{p}x-4\textcolor{orange}{p}^2=0$$
+$$(\textcolor{teal}{r_1}\sin{\textcolor{black}{\theta_t}})^2+4\textcolor{orange}{p}(\textcolor{teal}{r_1}\cos{\textcolor{black}{\theta_t}})-4\textcolor{orange}{p}^2=0$$
+$$\textcolor{teal}{r_1}^2(\sin^2{\textcolor{black}{\theta_t}})+\textcolor{teal}{r_1}(4\textcolor{orange}{p}\cos{\textcolor{black}{\theta_t}})+(-4\textcolor{orange}{p}^2)=0$$
+\\
+$$\textcolor{teal}{r_1} = \frac
+{-(4\textcolor{orange}{p}\cos{\textcolor{black}{\theta_t}}) \pm \sqrt{(4\textcolor{orange}{p}\cos{\textcolor{black}{\theta_t}})^2 + 4(\sin^2{\textcolor{black}{\theta_t}})(-4\textcolor{orange}{p}^2)}}
+{2(\sin^2{\textcolor{black}{\theta_t}})}$$
+$$\textcolor{teal}{r_1} = \frac
+{-4\textcolor{orange}{p}\cos{\textcolor{black}{\theta_t}} \pm \sqrt{16\textcolor{orange}{p}^2\cos^2{\textcolor{black}{\theta_t}} + 16\textcolor{orange}{p}^2\sin^2{\textcolor{black}{\theta_t}}}}
+{2(1-\cos^2{\textcolor{black}{\theta_t}})}$$
+$$\textcolor{teal}{r_1} = \frac
+{-4\textcolor{orange}{p}\cos{\textcolor{black}{\theta_t}} \pm 4\textcolor{orange}{p}\sqrt{\cos^2{\textcolor{black}{\theta_t}} + \sin^2{\textcolor{black}{\theta_t}}}}
+{-2(\cos^2{\textcolor{black}{\theta_t}}-1)}$$
+$$\textcolor{teal}{r_1} = \frac
+{2\textcolor{orange}{p}(\cos{\textcolor{black}{\theta_t}} \pm \sqrt{1})}
+{\cos^2{\textcolor{black}{\theta_t}}-1^2}$$
+$$\textcolor{teal}{r_1} = \frac
+{\textcolor{purple}{l}(\cos{\textcolor{black}{\theta_t}} \pm 1)}
+{(\cos{\textcolor{black}{\theta_t}}-1)(\cos{\textcolor{black}{\theta_t}}+1)}$$
+
+\bigskip
+\begin{multicols}{2}
+\flushcolumns
+\noindent
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}(\cos{\textcolor{black}{\theta_t}} + 1)}{(\cos{\textcolor{black}{\theta_t}} - 1)(\cos{\textcolor{black}{\theta_t}} + 1)}$$
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\cos{\textcolor{black}{\theta_t}} - 1}$$
+$$\textcolor{orange}{p} = \frac{2\textcolor{orange}{p}}{\cos{0} - 1}$$
+$$\textcolor{orange}{p} = \frac{2\textcolor{orange}{p}}{1 - 1}$$
+$$\textcolor{orange}{p} = \frac{2\textcolor{orange}{p}}{0}$$
+\centering
+\textcolor{red}{[REJECT]}
+\columnbreak
+\bigskip
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}(\cos{\textcolor{black}{\theta_t}} - 1)}{(\cos{\textcolor{black}{\theta_t}} - 1)(\cos{\textcolor{black}{\theta_t}} + 1)}$$
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\cos{\textcolor{black}{\theta_t}} + 1}$$
+$$\textcolor{orange}{p} = \frac{2\textcolor{orange}{p}}{\cos{0} + 1}$$
+$$\textcolor{orange}{p} = \frac{2\textcolor{orange}{p}}{1 + 1}$$
+$$\textcolor{orange}{p} = \frac{2\textcolor{orange}{p}}{2}$$
+\centering
+\textcolor{green}{[ACCEPT]}
+\end{multicols}
+
+\centering
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\cos{\textcolor{black}{\theta_t}} + 1}$$
+$$\textcolor{black}{e} = 1$$
+$$\text{Parabola Primary Radius Formula: }\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$$

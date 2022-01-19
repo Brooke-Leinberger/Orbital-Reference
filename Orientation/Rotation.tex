@@ -1,0 +1,125 @@
+\section{Orientation Formats}
+	\subsection{Orientation in Space}
+		Attempting to orient yourself in space is notoriously difficult. Without gravity consistently acting in one direction, there is no natural reference point for which way "down" is, let alone left or right. There is a relatively straightforward way to side-step the issue: Convention. As with all things defined by convention, there are always multiple, often competing standard that frequently (annoyingly, and inconsistently) change based on scenario.
+		
+		With the many competing conventions for defining spatial coordinates, and which direction is even defined as "up", this model of orientation will allow for defining both "up" and "across" arbitrarily. Defining and using these two directions, a \textbf{Plane of Reference} can be constructed, and the orbital plane can be described relative to that Plane of Reference.
+		\\\\
+		%assumed to be unit vectors
+		\newcommand{\uv}{\hat{u}} %up
+		\newcommand{\dv}{\hat{d}} %reference direction
+		\newcommand{\fv}{\hat{f}} %forward
+		\newcommand{\wm}{W}
+		\textbf{Let: }
+		\begin{multicols}{2}
+		\begin{itemize}
+			\item $\uv$ : up vector
+			\item $\dv$ : reference vector
+			\item $\fv$ : forward vector
+			\item $\wm$ : world matrix
+		\end{itemize}
+		\end{multicols}
+	%Reference plane and direction, right handed space
+	
+		Constructing A Plane of Reference is very simple. $\uv$ is orthogonal to the Plane of Reference, and defines which way is "up". $\dv$ is on the Plane of Reference and acts as a meridian; it can act as a fixed point to help triangulate position. Lastly, $\fv$ is orthogonal to both $\uv$ and $\dv$. It can be defined as such to complete a right-handed set:
+		$$\fv = \uv \times \dv$$
+
+		Using these three vectors, the world matrix can defined such that it maps the $\hat{x}$,$\hat{y}$,$\hat{z}$ axes to the $\dv$,$\fv$,$\uv$ axes, respectively. It is now possible to work with the $x$ axis pointing toward the reference direction, and the $z$ axis pointing up, which can simplify things a great deal.
+		
+		$$\wm = 
+		\begin{bmatrix}
+		\dv_x & \fv_x & \uv_x \\
+		\dv_y & \fv_y & \uv_y \\
+		\dv_z & \fv_z & \uv_z
+		\end{bmatrix}				
+		$$
+		
+	\subsection{Orbital Elements}
+		Perhaps the more popular way to parameterize orbits is through \textbf{Orbital Elements}. Orbital Elements provide an easy to read way to uniquely describe an orbit. Three of the elements are used to describe Geometry and Physics: commonly, \textbf{Semi Major Axis}, \textbf{Eccentricity}, and \textbf{Standard Gravitational Parameter}; the other three elements are used to describe Rotation: \textbf{Inclination}, \textbf{Longitude of Ascending Node}, and \textbf{Argument of Periapsis}.
+		
+		Most of these are based off of a point called the \textbf{Ascending Node}. There are two nodes for any orbit where the inclination is non-zero; they are the \textbf{Ascending Node} and the \textbf{Descending Node}. They mark where the Orbital Plane intersect the Plane of Reference. As the name suggests, the Descending Node marks when the orbiting body crosses the reference plane to the side opposite the up vector, $\uv$. The Ascending Node conversely marks when the orbiting body crosses to the same side of Plane of Reference as the up vector, $\uv$.
+		
+		\newcommand{\na}{\vec{N_a}} %Ascending Node
+		%\newcommand{\nd}{\vec{N_d}} %Descending Node
+		\newcommand{\inc}{I} %Inclination
+		\newcommand{\ap}{A}  %Argument of Periapsis
+		\newcommand{\lan}{L} %Longitude of Ascending Node
+		\textbf{Let: }
+		\begin{itemize}
+		 	\item $\inc$ : Inclination; how tilted the orbital plane is from the Plane of Reference as measured from the $\na$; angular distance between $\uv$ and $\hv$
+		 	\item $\lan$ : Longitude of Ascending Node; The angular displacement from the reference direction, to the Ascending Node, measured counter-clock wise. 
+		 	\item $\ap$  : Argument of Periapsis
+			\item $\na$  : Ascending Node
+		\end{itemize}
+		 
+	\subsection{Orbital State Vectors}
+	\subsection{Orbital Matrix}
+	%The final matrix used between 2D representation and final 3D position
+	
+\section{Constructions}
+	\subsection{Orbital Elements}
+		%$$\rad_{\na} = \frac{\latus}{\e\cos{\left( -\ap \right) + 1}}$$
+		$$Q_{\inc} = \cos{\left( \frac{\inc}{2} \right)} + \sin{\left( \frac{\inc}{2} \right)} \left( \cos{\left( -\ap \right)}\ih + \sin{\left( -\ap \right)}\jh + 0\kh \right)$$
+		
+		$$Q_{\lan} = \cos{\left( \frac{\lan + \ap}{2} \right)} + \sin{\left( \frac{\lan + \ap}{2} \right)}\left(0\ih + 0\jh + 1\kh\right)$$
+		
+		$$Q_E = Q_{\lan}Q_{\inc}$$
+		
+		$$W(\theta)=
+		\begin{bmatrix}
+		\dv_x & \fv_x & \uv_x \\
+		\dv_y & \fv_y & \uv_y \\
+		\dv_z & \fv_z & \uv_z
+		\end{bmatrix}
+\begin{bmatrix}
+Q_{Ew}^2 + Q_{Ex}^2 - Q_{Ey}^2 - Q_{Ez}^2 & 2(Q_{Ex}Q_{Ey} - Q_{Ew}Q_{Ez}) & 2(Q_{Ew}Q_{Ey} + Q_{Ex}Q_{Ez})\\
+2(Q_{Ew}Q_{Ez} + Q_{Ex}Q_{Ey}) & Q_{Ew}^2 - Q_{Ex}^2 + Q_{Ey}^2 - Q_{Ez}^2 & 2(Q_{Ey}Q_{Ez} - Q_{Ew}Q_{Ex})\\
+2(Q_{Ex}Q_{Ez} - Q_{Ew}Q_{Ey}) & 2(Q_{Ew}Q_{Ex} + Q_{Ey}Q_{Ez}) & Q_{Ew}^2 - Q_{Ex}^2 - Q_{Ey}^2 + Q_{Ez}^2
+\end{bmatrix}
+   		\begin{bmatrix}
+   		\frac{\latus\cos{\theta}}{\e\cos{\theta}+1} \\
+   		\frac{\latus\sin{\theta}}{\e\cos{\theta}+1} \\
+   		0
+   		\end{bmatrix}
+		$$
+		
+	\subsection{Orbital State Vectors}
+	
+		\newcommand{\rv}{r}
+		\newcommand{\vv}{v}
+	
+		$$\hv = \rv \times \vv$$
+		$$\latus = \frac{\hv^2}{\stg}$$
+		$$\e = \sqrt{\latus\left(\frac{\vv^2}{\stg}-\frac{2}{\rv}\right)+1}$$
+		
+		\[\true = \begin{cases} 
+      		\rv \cdot \vv \geq 0    &+\arccos{\left( \frac{\latus - \rv}{\e \cdot \rv} \right)} \\
+      		\rv \cdot \vv < 0       &-\arccos{\left( \frac{\latus - \rv}{\e \cdot \rv} \right)}
+   		\end{cases} \]
+   		
+   		$$Q_{\peri} = \cos{\left(\frac{-\true}{2}\right)} + \sin{\left(\frac{-\true}{2}\right)\left(\hat{\hv}_x\ih + \hat{\hv}_y\jh + \hat{\hv}_z\kh \right)}$$
+   		
+   		$$Q_{\latus} = \cos{\left(\frac{90-\true}{2}\right)} + \sin{\left(\frac{90-\true}{2}\right)\left(\hat{\hv}_x\ih + \hat{\hv}_y\jh + \hat{\hv}_z\kh \right)}$$
+   		
+   		$$\hat{p} = Q_{\peri } \rv Q_{\peri }^*$$
+   		$$\hat{l} = Q_{\latus} \rv Q_{\latus}^*$$
+   		
+   		$$W(\theta) =
+   		\begin{bmatrix}
+   		\hat{p}_x & \hat{l}_x & \hat{h}_x\\
+   		\hat{p}_y & \hat{l}_y & \hat{h}_y\\
+   		\hat{p}_z & \hat{l}_z & \hat{h}_z
+   		\end{bmatrix} \cdot
+   		\begin{bmatrix}
+   		\frac{\latus\cos{\theta}}{\e\cos{\theta}+1} \\
+   		\frac{\latus\sin{\theta}}{\e\cos{\theta}+1} \\
+   		0
+   		\end{bmatrix}
+   		$$
+   		
+   		Elements to State Vectors
+		
+		
+
+\section{Conversions}
+	\subsection{Left Handed Space}
+

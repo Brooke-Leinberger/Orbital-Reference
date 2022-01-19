@@ -1,0 +1,162 @@
+\subsubsection{Principles}
+The next conic section we'll cover is the \textbf{Hyperbola}. Its main characteristics are its two mirrored sections and \textbf{open shape}. Due to this shape, it is considered an \textbf{escape trajectory}, with the section opposite periapsis being mostly imaginary since it is not accessible.
+\begin{center}
+$$\text{Standard Formula: } \left(\frac{x}{\textcolor{blue}{a}}\right)^2 - \left(\frac{y}{\textcolor{red}{b}}\right)^2 = 1$$
+\begin{multicols}{2}
+\begin{itemize}
+    \item Semi Latus Rectum: \textcolor{purple}{$l$}
+    \item Semi Major Axis: \textcolor{blue}{$a$}
+    \item Semi Minor Axis: \textcolor{red}{$b$}
+    \item Linear Eccentricity: \textcolor{OliveGreen}{$c$}
+    \item Radius of Prime Focus: \textcolor{teal}{$r_1$}
+    \item Radius of Empty Focus: \textcolor{brown}{$r_2$}
+    
+\end{itemize}
+\end{multicols}
+\begin{tikzpicture}
+    \newcommand{\es}{2}
+    \newcommand{\scale}{.8}
+    \newcommand{\asymptote}{120}
+    \newcommand{\offset}{20}
+    \newcommand{\ch}{1}
+    \newcommand{\bh}{1.75}
+    \newcommand{\lh}{3}
+    \newcommand{\xh}{0}
+    \newcommand{\yh}{\lh}
+    \tiny
+    \filldraw [black] (0,0) circle (1pt) node[anchor = north east] {prime focus};
+    \filldraw [black] (\xh * \scale,-\yh * \scale) circle (1pt) node[anchor = north east] {$h$};
+    \filldraw [black] (0,0) circle (1pt) node[anchor = north east] {prime focus};
+    \filldraw [black] (4 * \scale * \ch,0) circle (1pt) node[anchor = north west] {empty focus};
+    \filldraw [black] (2 * \scale * \ch,0) circle (1pt) node[anchor = north] {center};
+    \draw[domain= -(\asymptote - \offset): (\asymptote - \offset),scale=\scale,samples=500] plot (\x:{\lh / (\es * cos(\x) + 1)});
+    \draw[domain= (\asymptote + 0.825*\offset):360 - (\asymptote + 0.825 * \offset),scale=\scale,samples=500] plot (\x:{\lh / (\es * cos(\x) + 1)});
+    
+    \draw [teal] (\xh * \scale, -\yh * \scale) -- (0,0);
+    \draw [brown] (\xh * \scale, -\yh * \scale) -- (4 * \scale * \ch,0);
+    \draw [blue] (\ch * \scale,0) -- (2*\ch * \scale,0);
+    \draw [red] (2 * \ch * \scale,0) -- (2 * \ch * \scale, \bh * \scale);
+    \draw [ForestGreen] (1 * \ch * \scale,0) -- (2 * \ch * \scale, \bh * \scale);
+    \draw [orange] (0,0) -- (\ch * \scale,0);
+    \draw [ForestGreen] (2 * \ch * \scale,0) -- (4 * \ch * \scale,0);
+    \draw [purple] (0,0) -- (0, \lh * \scale);
+    
+    \newcommand{\rta}{0.5 * {\xh + 4 * \ch}} % average of r2
+    
+    \node[anchor = east] at (0.5 * \xh * \scale, -0.5 * \yh * \scale) {\textcolor{teal}{$r_1$}};
+    \node[anchor = north west] at (2 * \ch * \scale + 0.5 * \xh * \scale, 0.5 * -\yh * \scale) {\textcolor{brown}{$r_2$}};
+    \node[anchor = south] at (1.5 * \ch * \scale, 0) {\textcolor{blue}{$a$}};
+    \node[anchor = west] at (2 * \ch * \scale, \bh * 0.5 * \scale) {\textcolor{red}{$b$}};
+    \node[anchor = south east] at (.75 * \ch * \scale, 0) {\textcolor{orange}{$p$}};
+    \node[anchor = south west] at (3.25 * \ch * \scale, 0) {\textcolor{ForestGreen}{$c$}};
+    \node[anchor = east] at (1.5 * \ch * \scale, \bh * \scale * 0.5) {\textcolor{ForestGreen}{$c$}};
+    \node[anchor = west] at (0, \lh * \scale * 0.5) {\textcolor{purple}{$l$}};
+    \normalsize
+\end{tikzpicture}
+\end{center}
+Defining principle: The distances between an arbitrary point on the hyperbola, and the two foci, have a constant difference:
+$$|\textcolor{teal}{r_1} - \textcolor{brown}{r_2}| = \text{\textit{Constant of Radius}}$$
+\newpage
+
+The \textbf{\textit{Constant of Radius}} for a Hyperbola is very simple to define in terms In the case of the point being on the Periapsis of the Hyperbola. The Primary Radius will be the difference of between the Semi Major Axis and the Linear Eccentricity, while the Empty Radius will be the sum of the Semi Major Axis and the Linear Eccentricity.
+
+\bigskip
+\begin{minipage}{\textwidth}
+$$\textcolor{orange}{p} = \textcolor{OliveGreen}{c} - \textcolor{blue}{a}$$
+$$\textcolor{teal}{r_1} = \textcolor{OliveGreen}{c} - \textcolor{blue}{a}$$
+$$\textcolor{brown}{r_2} = \textcolor{OliveGreen}{c}+\textcolor{blue}{a}$$
+$$|\textcolor{teal}{r_1} - \textcolor{brown}{r_2}| = \text{\textit{Constant of Radius}}$$
+$$\text{\textit{Constant of Radius}} = |(\textcolor{OliveGreen}{c} - \textcolor{blue}{a}) - (\textcolor{OliveGreen}{c}+\textcolor{blue}{a})|$$
+$$\text{\textit{Constant of Radius}} =|-2\textcolor{blue}{a}|$$
+$$\text{\textit{Constant of Radius}} = 2\textcolor{blue}{a}$$
+\begin{center}
+\scriptsize{\textit{(The Constant of Radius applies not just to Periapsis, but to every point on the ellipse as well.)}}
+\end{center}
+\normalsize
+\end{minipage}
+\bigskip
+
+Now that we have the defining principle defined algebraically, we can now also define the geometric identities: \textbf{Eccentricity} and \textbf{Semi Latus Rectum}. Because Semi Latus Rectum is perpendicular to the Major Axis, we can achieve this creating a right triangle, using Semi Latus Rectum as one leg, and the distance between the foci as the other leg, and using Pythagorean's Theorem.
+
+$$\textcolor{teal}{r_1} = \textcolor{purple}{l}$$
+$$\textcolor{brown}{r_2} = 2\textcolor{blue}{a} + \textcolor{purple}{l}$$
+$$\textcolor{teal}{r_1}^2 + (2\textcolor{OliveGreen}{c})^2 = \textcolor{brown}{r_2}^2$$
+$$\textcolor{purple}{l}^2 + 4\textcolor{blue}{a}^2\textcolor{black}{e}^2 = (2\textcolor{blue}{a} + \textcolor{purple}{l})^2$$
+$$\textcolor{purple}{l}^2 + 4\textcolor{blue}{a}^2\textcolor{black}{e}^2 = 4\textcolor{blue}{a}^2+4\textcolor{purple}{l}\textcolor{blue}{a}+\textcolor{purple}{l}^2$$
+$$4\textcolor{blue}{a}^2\textcolor{black}{e}^2 = 4\textcolor{blue}{a}^2+4\textcolor{purple}{l}\textcolor{blue}{a}$$
+$$\textcolor{blue}{a}\textcolor{black}{e}^2 = \textcolor{blue}{a} + \textcolor{purple}{l}$$
+$$\textcolor{purple}{l} = \textcolor{blue}{a}(\textcolor{black}{e}^2-1)$$
+
+\textbf{Latus Scale} is another scalar metric that appears often, and is convenient to have defined.
+
+\bigskip
+\begin{minipage}{\textwidth}
+$$\textcolor{black}{s}=\frac{\textcolor{purple}{l}}{\textcolor{blue}{a}}$$
+$$\textcolor{black}{s} = \frac{\textcolor{blue}{a}(\textcolor{black}{e}^2-1)} {\textcolor{blue}{a}}$$
+$$\textcolor{black}{s} = \textcolor{black}{e}^2-1$$
+$$\textcolor{purple}{l} = \textcolor{blue}{a} \textcolor{black}{s}
+$$
+\end{minipage}
+\bigskip
+
+As we can see above for Semi Minor axis and Semi Latus Rectum, anywhere where Latus Scale was part of a definition in the ellipse, the hyperbolic equivalent is negative Latus Scale. This explains why everything about the hyperbola seems a little backwards, or inside-out compared to the ellipse; because almost all values have been sign flipped. This is the main reason why coming up with a unified set of formulae for conic sections is so important, and so tedious.
+\\
+
+There is no analogous case of the point being on the covertex for the hyperbola, like on the ellipse. Instead we must use a known coordinate pair and plug it back into the standard formula to find the relationship for Semi Minor Axis. The easiest example to use is Periapsis.
+
+\begin{multicols}{2}
+\raggedcolumns
+$$\left(\frac{x}{\textcolor{blue}{a}}\right)^2 - \left(\frac{y}{\textcolor{red}{b}}\right)^2 = 1$$
+$$\left(\frac{y}{\textcolor{red}{b}}\right)^2 = \left(\frac{x}{\textcolor{blue}{a}}\right)^2 - 1$$
+$$\frac{y^2}{\textcolor{red}{b}^2} = \frac{x^2 - \textcolor{blue}{a}^2}{\textcolor{blue}{a}^2}$$
+$$\frac{\textcolor{red}{b}^2}{y^2} = \frac{\textcolor{blue}{a}^2}{x^2 - \textcolor{blue}{a}^2}$$
+$$\textcolor{red}{b}^2 = \frac{y^2\textcolor{blue}{a}^2}{x^2-\textcolor{blue}{a}^2}$$
+%\columnbreak
+$$\textcolor{red}{b}^2 = \frac{(\textcolor{purple}{l})^2\textcolor{blue}{a}^2}{\textcolor{OliveGreen}{c}^2 - \textcolor{blue}{a}^2}$$
+$$\textcolor{red}{b}^2 = \frac{\textcolor{purple}{l}^2} {\textcolor{black}{e}^2 - 1}$$
+$$\textcolor{red}{b}^2 = \frac{\textcolor{blue}{a}^2(\textcolor{black}{e}^2-1)^2} {\textcolor{black}{e}^2 - 1}$$
+$$\textcolor{red}{b}^2 = \textcolor{blue}{a}^2(\textcolor{black}{e}^2-1)$$
+$$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{\textcolor{black}{e}^2-1}$$
+$$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{\textcolor{black}{s}}$$
+\end{multicols}
+
+Pinpointing the domain of the ellipse can also help in ensuring we cover all cases. The main limitation of the standard ellipse formula is the value of Semi Minor Axis ($\textcolor{red}{b}$).
+
+$$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{\textcolor{black}{s}}$$
+$$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{\textcolor{black}{e}^2-1}$$
+
+$$\sqrt{\textcolor{black}{e}^2-1}\text{  is defined for  } \textcolor{black}{e}^2-1 \geq 0$$
+$$\textcolor{black}{e}^2-1 \geq 0$$
+$$\textcolor{black}{e}^2 \geq 1$$
+$$\textcolor{black}{e}\leq-1\text{ or } \textcolor{black}{e} \geq 1$$\\
+
+Although technically $\textcolor{black}{e}\leq-1\text{ or } \textcolor{black}{e} \geq 1$, $\textcolor{black}{e} = 1$ is an edge case which is better described by other conic section, and $\textcolor{black}{e} < 0$ is simply ignored since negative eccentricities operate identically to positive eccentricities, but flipped over the $y$ axis. So the domain of this hyperbola in this documentation is $\textcolor{black}{e} > 1$.
+
+However, Hyperbolas have a unique problem: Not all values of True Anomaly make geometric, physical, or navigational sense. Some True Anomaly values outside a certain range on the left arc are infinitely far away, and the entirety of the right half of the Hyperbola makes no sense as there is no gravitational force to bring it there, not even mentioning the fact if you could, it'd take an infinite amount of time.
+
+To remedy this, we must define our domain of True Anomaly as well as Eccentricity. The point where we can cut off our trajectory is where the distance from the orbited body to the craft is infinite.\\\\
+
+We already have a radius function from the ellipse and as we will see in next section, it is congruent in the hyperbola as well.
+
+\bigskip
+$$\theta_\text{lim} : \text{limit of }\theta_t \text{ domain}$$
+$$m_{lim} : \text{Slope form of }\theta_t$$
+
+\bigskip
+\begin{multicols}{2}
+\raggedcolumns
+\noindent
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$$
+$$\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1 = \frac{\textcolor{purple}{l}}{\textcolor{teal}{r_1}}$$
+$$\cos{\textcolor{black}{\theta_t}} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\textcolor{teal}{r_1}} - \frac{1}{\textcolor{black}{e}}$$
+$$\textcolor{black}{\theta_t} = \pm\arccos{\left( \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\textcolor{teal}{r_1}} - \frac{1}{\textcolor{black}{e}}\right)}$$
+$$\theta_\text{lim} = \pm\lim_{\textcolor{teal}{r_1}\to\infty }
+\arccos{\left( \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cdot\infty} - \frac{1}{\textcolor{black}{e}}\right)}$$
+$$\theta_\text{lim} = \pm\lim_{\textcolor{teal}{r_1}\to\infty } \arccos{\left(0 - \frac{1}{\textcolor{black}{e}}\right)}$$
+$$\theta_\text{lim} = \pm \arccos{\left(-\frac{1}{\textcolor{black}{e}}\right)}$$
+$$m_{lim} = \pm \tan{\left(\arccos{\left(-\frac{1}{\textcolor{black}{e}}\right)}\right)}$$
+$$m_{lim} = \pm \sqrt{\textcolor{black}{e}^2-1}$$
+$$m_{lim} = \pm \sqrt{\textcolor{black}{s}}$$
+
+
+\end{multicols}

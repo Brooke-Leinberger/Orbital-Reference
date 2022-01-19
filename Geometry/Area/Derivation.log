@@ -1,0 +1,2166 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.12)  26 DEC 2021 23:02
+entering extended mode
+**./Derivation.tex
+(Derivation.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-08-27>
+! Undefined control sequence.
+l.1 \subsection
+               {Derivation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \subsection{D
+                 erivation}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+! Undefined control sequence.
+l.2 $$\textcolor
+                {black}{r}=\frac{\textcolor{purple}{l}}{\textcolor{black}{e}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}
+l.2 ...le}{l}}{\textcolor{black}{e}\cos{\theta}+1}
+                                                  $$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}\cos {\theta }+1
+l.2 ...le}{l}}{\textcolor{black}{e}\cos{\theta}+1}
+                                                  $$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (109.30843pt too wide) detected at line 2
+[]\OML/cmm/m/it/10 r \OT1/cmr/m/n/10 = []
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 $
+     $A=\frac{1}{2}\int_{\theta_1}^{\theta_2}\textcolor{black}{r}^2d\theta$$
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--4
+[] 
+ []
+
+! Undefined control sequence.
+l.4 ...c{1}{2}\int_{\theta_1}^{\theta_2}\textcolor
+                                                  {black}{r}^2d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (91.83746pt too wide) detected at line 4
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] []\OML/cmm/m/it/10 r[]d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 $
+     $A=\frac{1}{2}\int_{\theta_1}^{\theta_2}\left(\frac{\textcolor{purple}{...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--6
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}
+l.6 ...le}{l}}{\textcolor{black}{e}\cos{\theta}+1}
+                                                  \right)^2d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}\cos {\theta }+1
+l.6 ...le}{l}}{\textcolor{black}{e}\cos{\theta}+1}
+                                                  \right)^2d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (149.4098pt too wide) detected at line 6
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [][] \OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 $
+     $A=\frac{\textcolor{purple}{l}^2}{2}\int_{\theta_1}^{\theta_2}\frac{1}{...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--8
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.8 $$A=\frac{\textcolor{purple}{l}^2}{2}
+                                         \int_{\theta_1}^{\theta_2}\frac{1}{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.8 ...{1}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (171.87866pt too wide) detected at line 8
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] []\OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 $
+      $A=\frac{\textcolor{purple}{l}^2}{2}\int_{\theta_1}^{\theta_2}\frac{(1...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 10--10
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.10 $$A=\frac{\textcolor{purple}{l}^2}{2}
+                                          \int_{\theta_1}^{\theta_2}\frac{(1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor 
+                         {black}{e}^2)
+l.10 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor 
+                         {black}{e}^2)(\textcolor {black}{e}\cos {\theta }+1)^2
+l.10 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor {black}{e}^2)(\textcolor 
+                                                  {black}{e}\cos {\theta }+1)^2
+l.10 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (228.62753pt too wide) detected at line 10
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] []\OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 $
+      $A=\frac{\textcolor{purple}{l}^2}{2}\int_{\theta_1}^{\theta_2}\frac{\t...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 12--12
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.12 $$A=\frac{\textcolor{purple}{l}^2}{2}
+                                          \int_{\theta_1}^{\theta_2}\frac{\t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}\cos {\theta }+1-\textcolor {black}{e}^2-\te...
+l.12 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...lack}{e}\cos {\theta }+1-\textcolor 
+                                                  {black}{e}^2-\textcolor {b...
+l.12 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...-\textcolor {black}{e}^2-\textcolor 
+                                                  {black}{e}\cos {\theta }
+l.12 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor 
+                         {black}{e}^2)(\textcolor {black}{e}\cos {\theta }+1)^2
+l.12 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor {black}{e}^2)(\textcolor 
+                                                  {black}{e}\cos {\theta }+1)^2
+l.12 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (264.76509pt too wide) detected at line 12
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] []\OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 $
+      $A=\frac{\textcolor{purple}{l}^2}{2}\int_{\theta_1}^{\theta_2}\left(\f...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--14
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.14 $$A=\frac{\textcolor{purple}{l}^2}{2}
+                                          \int_{\theta_1}^{\theta_2}\left(\f...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}\cos {\theta }+1
+l.14 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor 
+                         {black}{e}^2)(\textcolor {black}{e}\cos {\theta }+1)^2
+l.14 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor {black}{e}^2)(\textcolor 
+                                                  {black}{e}\cos {\theta }+1)^2
+l.14 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}^2+\textcolor {black}{e}\cos {\theta }
+l.15 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor {black}{e}^2+\textcolor 
+                                              {black}{e}\cos {\theta }
+l.15 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor 
+                         {black}{e}^2)(\textcolor {black}{e}\cos {\theta }+1)^2
+l.15 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1-\textcolor {black}{e}^2)(\textcolor 
+                                                  {black}{e}\cos {\theta }+1)^2
+l.15 ...^2)(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (394.8307pt too wide) detected at line 15
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\int_{\t...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 17--17
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.17 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.17 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}\cos {\theta }+1
+l.17 ...rac{1}{\textcolor{black}{e}\cos{\theta}+1}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}^2+\textcolor {black}{e}\cos {\theta }
+l.18 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor {black}{e}^2+\textcolor 
+                                              {black}{e}\cos {\theta }
+l.18 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.18 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (309.2229pt too wide) detected at line 18
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\int_{\t...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 20--20
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.20 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.20 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}(\cos ^2{\left (\frac {\theta }{2}\right )}-...
+l.21 ...a}{2}\right)}-\sin^2{\frac{\theta}{2}})+1}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.22 -\textcolor
+                {black}{e}\cdot\frac{\textcolor{black}{e}+\cos{\theta}}{(\te...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}+\cos {\theta }
+l.22 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.22 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (400.84909pt too wide) detected at line 22
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\int_{\t...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 24--24
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.24 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.24 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1+\textcolor 
+                          {black}{e})^{\frac {-1}{2}}(1-\textcolor {black}{e...
+l.25 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...k}{e})^{\frac {-1}{2}}(1-\textcolor 
+                                                  {black}{e})^{\frac {1}{2}}
+l.25 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1+\textcolor 
+                         {black}{e})^{\frac {-1}{2}}(1-\textcolor {black}{e}...
+l.25 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...k}{e})^{\frac {-1}{2}}(1-\textcolor 
+                                                  {black}{e})^{\frac {1}{2}}
+l.25 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}(1-\tan ^2{\frac {\theta }{2}})+\sec ^2{\lef...
+l.26 ...}})+\sec^2{\left(\frac{\theta}{2}\right)}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 -\textcolor
+                {black}{e}\cdot\frac{\textcolor{black}{e}(\sin^2{\theta}+\co...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}(\sin ^2{\theta }+\cos ^2{\theta })+\cos {\t...
+l.27 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.27 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (576.3941pt too wide) detected at line 27
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\int_{\t...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 29--29
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.29 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.29 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.30 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.30 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1+\textcolor 
+                         {black}{e})^{\frac {-2}{2}}(1+\textcolor {black}{e}...
+l.30 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...k}{e})^{\frac {-2}{2}}(1+\textcolor 
+                                                  {black}{e})^{\frac {1}{2}}...
+l.30 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ck}{e})^{\frac {1}{2}}(1-\textcolor 
+                                                  {black}{e})^{\frac {1}{2}}
+l.30 ...2}}(1-\textcolor{black}{e})^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}-\textcolor {black}{e}\tan ^2{\frac {\theta ...
+l.31 ...ac{\theta}{2}}+1+\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor {black}{e}-\textcolor 
+                                            {black}{e}\tan ^2{\frac {\theta ...
+l.31 ...ac{\theta}{2}}+1+\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.32 -\textcolor
+                {black}{e}\cdot\frac{\textcolor{black}{e}\cos^2{\theta}+\cos...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}\cos ^2{\theta }+\cos {\theta }+\textcolor {...
+l.32 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...{\theta }+\cos {\theta }+\textcolor 
+                                                  {black}{e}\sin ^2{\theta }
+l.32 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.32 ...}}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (680.26274pt too wide) detected at line 32
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\int_{\t...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 34--34
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.34 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.34 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1+\textcolor 
+                         {black}{e})^{-1}(1-\textcolor {black}{e}^2)^{\frac ...
+l.35 ...}(1-\textcolor{black}{e}^2)^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...color {black}{e})^{-1}(1-\textcolor 
+                                                  {black}{e}^2)^{\frac {1}{2}}
+l.35 ...}(1-\textcolor{black}{e}^2)^{\frac{1}{2}}}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.36 ...tcolor{black}{e})\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.36 ...tcolor{black}{e})\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (1+\textcolor 
+                         {black}{e})+(1-\textcolor {black}{e})\tan ^2{\frac ...
+l.36 ...tcolor{black}{e})\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...textcolor {black}{e})+(1-\textcolor 
+                                                  {black}{e})\tan ^2{\frac {...
+l.36 ...tcolor{black}{e})\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.37 -\textcolor
+                {black}{e}\cdot\frac{(\textcolor{black}{e}\cos{\theta}+1)(\c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)(\cos {\theta })+(\textcol...
+l.37 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ta }+1)(\cos {\theta })+(\textcolor 
+                                                  {black}{e}\sin {\theta })(...
+l.37 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.37 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (664.78961pt too wide) detected at line 37
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\int_{\t...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 39--39
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.39 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.39 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \sqrt {1-\textcolor 
+                               {black}{e}}
+l.40 \frac{2}{\sqrt{1-\textcolor{black}{e}}}
+                                            \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.41 ...tcolor{black}{e}}\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.41 ...tcolor{black}{e}}\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.41 ...tcolor{black}{e}}\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.41 ...tcolor{black}{e}}\tan^2{\frac{\theta}{2}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 -\textcolor
+                {black}{e}\cdot\frac{(\textcolor{black}{e}\cos{\theta}+1)(\c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)(\cos {\theta })+(\textcol...
+l.42 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ta }+1)(\cos {\theta })+(\textcolor 
+                                                  {black}{e}\sin {\theta })(...
+l.42 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.42 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (533.59933pt too wide) detected at line 42
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\int_{\t...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 44--44
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.44 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.44 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \int_{\theta_1}^{\theta_2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \sqrt {1-\textcolor 
+                               {black}{e}}
+l.45 \frac{2}{\sqrt{1-\textcolor{black}{e}}}
+                                            \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.46 ...}}}\tan{\left(\frac{\theta}{2}\right)})^2}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.46 ...}}}\tan{\left(\frac{\theta}{2}\right)})^2}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.46 ...}}}\tan{\left(\frac{\theta}{2}\right)})^2}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.46 ...}}}\tan{\left(\frac{\theta}{2}\right)})^2}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 -\textcolor
+                {black}{e}\cdot\frac{(\textcolor{black}{e}\cos{\theta}+1)(\c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)(\cos {\theta })+(\textcol...
+l.47 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ta }+1)(\cos {\theta })+(\textcolor 
+                                                  {black}{e}\sin {\theta })(...
+l.47 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.47 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  \right)d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (553.82433pt too wide) detected at line 47
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] [][] [] \OML/cmm/m/it/10 d
+ []
+
+! Undefined control sequence.
+l.49 \scriptsize
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \begin{minipage}{\textwidth-15pt}
+                                      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+
+! LaTeX Error: Environment multicols undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \begin{multicols}
+                      {3}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no 3 in font nullfont!
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.53 ...xtcolor{black}{e}}{1+\textcolor{black}{e}}
+                                                  }\tan{\left(\frac{\theta}{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.53 ...xtcolor{black}{e}}{1+\textcolor{black}{e}}
+                                                  }\tan{\left(\frac{\theta}{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.55 ...xtcolor{black}{e}}{1+\textcolor{black}{e}}
+                                                  }\sec^2{\left(\frac{\theta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.55 ...xtcolor{black}{e}}{1+\textcolor{black}{e}}
+                                                  }\sec^2{\left(\frac{\theta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.57 ...xtcolor{black}{e}}{1-\textcolor{black}{e}}
+                                                  }\cos^2{\left(\frac{\theta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.57 ...xtcolor{black}{e}}{1-\textcolor{black}{e}}
+                                                  }\cos^2{\left(\frac{\theta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.58 \columnbreak
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.59 $$v=\textcolor
+                   {black}{e}\cos{\theta}+1$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.61 $$dv=-\textcolor
+                     {black}{e}\sin{\theta}d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}
+l.63 ...\frac{-\csc{\theta}}{\textcolor{black}{e}}
+                                                  dv$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.64 \columnbreak
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.68 \columnbreak
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{minipage} on input line 50 ended by \end{multicols}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \end{multicols}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \normalsize
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (8211.99998pt too wide) in paragraph at lines 50--72
+[]$[]$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\cdot
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 73--73
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.73 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.73 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \sqrt {1-\textcolor 
+                               {black}{e}^2}
+l.74 \frac{2}{\sqrt{1-\textcolor{black}{e}^2}}
+                                              \int_{\theta_1}^{\theta_2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.75 ...}}}\tan{\left(\frac{\theta}{2}\right)})^2}
+                                                  d\theta
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.75 ...}}}\tan{\left(\frac{\theta}{2}\right)})^2}
+                                                  d\theta
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.75 ...}}}\tan{\left(\frac{\theta}{2}\right)})^2}
+                                                  d\theta
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.75 ...}}}\tan{\left(\frac{\theta}{2}\right)})^2}
+                                                  d\theta
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.76 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot\textcolor{black}{e}\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.76 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot\textcolor{black}{e}\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.76 ...(1-\textcolor{black}{e}^2)}\cdot\textcolor
+                                                  {black}{e}\int_{\theta_1}^...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)(\cos {\theta })+(\textcol...
+l.76 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ta }+1)(\cos {\theta })+(\textcolor 
+                                                  {black}{e}\sin {\theta })(...
+l.76 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> (\textcolor 
+                       {black}{e}\cos {\theta }+1)^2
+l.76 ...)}{(\textcolor{black}{e}\cos{\theta}+1)^2}
+                                                  d\theta$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (621.68187pt too wide) detected at line 76
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  [] [][] []\OML/cmm/m
+/it/10 d \OMS/cmsy/m/n/10   []  []\OML/cmm/m/it/10 e [][] []d
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\cdot
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 78--78
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.78 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.78 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \sqrt {1-\textcolor 
+                               {black}{e}^2}
+l.79 \frac{2}{\sqrt{1-\textcolor{black}{e}^2}}
+                                              \int_{\theta_1}^{\theta_2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.81 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot\textcolor{black}{e}\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.81 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot\textcolor{black}{e}\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.81 ...(1-\textcolor{black}{e}^2)}\cdot\textcolor
+                                                  {black}{e}\int_{\theta_1}^...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (424.87277pt too wide) detected at line 81
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  [] [][] []\OML/cmm/m
+/it/10 du \OMS/cmsy/m/n/10   []  []\OML/cmm/m/it/10 e [][] []d
+ []
+
+
+! LaTeX Error: Environment multicols undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 \begin{multicols}
+                      {2}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 \begin{multicols}{2
+                        }
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 2 in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 84--86
+[] 
+ []
+
+
+Overfull \hbox (114.2513pt too wide) detected at line 86
+[]\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )] = []\OML/cmm/m/it/10
+ dx
+ []
+
+
+Overfull \hbox (137.18683pt too wide) detected at line 87
+[]\OT1/cmr/m/n/10 [[]] = []\OML/cmm/m/it/10 dx
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{multicols}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \end{multicols}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}\cdot
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 90--90
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.90 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.90 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \sqrt {1-\textcolor 
+                               {black}{e}^2}
+l.91 \frac{2}{\sqrt{1-\textcolor{black}{e}^2}}
+                                              [\arctan(u)]_{\theta_1}^{\thet...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.92 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot\textcolor{black}{e}[...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.92 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  \cdot\textcolor{black}{e}[...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.92 ...(1-\textcolor{black}{e}^2)}\cdot\textcolor
+                                                  {black}{e}[\frac{w}{v}]_{\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (328.10265pt too wide) detected at line 92
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  []\OT1/cmr/m/n/10 [[
+](\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 )][] \OMS/cmsy/m/n/10   []  []\OML/cmm/m/i
+t/10 e\OT1/cmr/m/n/10 [[]][]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)}(\frac{2...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 94--94
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.94 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  (\frac{2\arctan(u)}{\sqrt{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.94 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                  (\frac{2\arctan(u)}{\sqrt{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \sqrt {1-\textcolor 
+                               {black}{e}^2}
+l.94 ...rctan(u)}{\sqrt{1-\textcolor{black}{e}^2}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{\textcolor {black}{e}w}
+l.95 ...extcolor{black}{\textcolor{black}{e}w}}{v}
+                                                  )_{\theta_1}^{\theta_2}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor {black}{\textcolor 
+                                         {black}{e}w}
+l.95 ...extcolor{black}{\textcolor{black}{e}w}}{v}
+                                                  )_{\theta_1}^{\theta_2}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (228.15154pt too wide) detected at line 95
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = []([] \OMS/cmsy/m/n/10   []\OT1/cmr/m/n/10
+ )[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97 $
+      $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)} (
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 97--97
+[] 
+ []
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {purple}{l}^2
+l.97 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                   (
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 2(1-\textcolor 
+                          {black}{e}^2)
+l.97 ...purple}{l}^2}{2(1-\textcolor{black}{e}^2)}
+                                                   (
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1-\textcolor 
+                        {black}{e}
+l.98 ...right)})}{\sqrt{1-\textcolor{black}{e}^2}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> 1+\textcolor 
+                        {black}{e}
+l.98 ...right)})}{\sqrt{1-\textcolor{black}{e}^2}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \sqrt {1-\textcolor 
+                               {black}{e}^2}
+l.98 ...right)})}{\sqrt{1-\textcolor{black}{e}^2}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}\sin {\theta }
+l.99 ...heta}}{\textcolor{black}{e}\cos{\theta}+1}
+                                                  )_{\theta_1}^{\theta_2}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \textcolor 
+                      {black}{e}\cos {\theta }+1
+l.99 ...heta}}{\textcolor{black}{e}\cos{\theta}+1}
+                                                  )_{\theta_1}^{\theta_2}$$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (300.1956pt too wide) detected at line 99
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = []([] \OMS/cmsy/m/n/10   []\OT1/cmr/m/n/10
+ )[]
+ []
+
+)
+! Emergency stop.
+<*> ./Derivation.tex
+                    
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 22 strings out of 478927
+ 525 string characters out of 2852534
+ 313879 words of memory out of 3000000
+ 17982 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 17i,5n,12p,286b,99s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

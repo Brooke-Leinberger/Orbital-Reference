@@ -1,0 +1,30 @@
+\newcommand{\aster}{\textcolor{red}{*}}
+
+\subsection{Intro and Generics}
+According to Kepler's first law of planetary motion, All of the planets orbit the sun in the shape of an ellipse. Newton would later expand this definition to be that the geometry of any given orbit can be defined as a conic section; either (in order of increasing eccentricity) a circle, ellipse, parabola, or hyperbola.
+\\\\
+
+Common parts of an orbit:
+\begin{itemize}
+    \item Primary Focus: The focus of the orbit where the center of mass of the orbit lies (usually usually just the planet or star being orbited).
+    \item Empty Focus\aster: The other focus of the orbit, which is typically unoccupied.
+    \item Orbital Center\aster: The center of the orbit; At the midpoint between the two foci; At the midpoint between Apoapsis and Periapsis.
+    \item Periapsis: The point on the orbit that is closest to the primary focus; \textcolor{orange}{p}
+    \item Apoapsis\aster: The point on the orbit that is farthest from the primary focus; The point closest to the empty focus.
+    \item True Anomaly: The angle as measured from the primary focus, from a point on the orbit, to periapsis, in the direction of orbit; \textcolor{black}{$\theta_t$}
+    \item Major Axis\aster: The longer axis of the orbit. It lies from Periapsis to Apoapsis.
+    \item Minor Axis\aster: The shorter axis of the orbit. It lies perpendicular to the Major axis, with its midpoint lying on the orbital center.
+    \item Latus Rectum: The chord intersecting the primary focus, running perpendicular to the Major Axis.
+    \item Eccentricity: A scalar metric measuring how far a conic section/orbit deviates from a circle; \textcolor{black}{$e$}
+    \item Semi Major Axis\aster: 1/2 the length of the Major Axis;  \textcolor{blue}{$a$}
+    \item Semi Minor Axis\aster: 1/2 the length of the Minor Axis; \textcolor{red}{$b$}
+    \item Semi Latus Rectum: 1/2 the length of the Semi Latus Rectum;  \textcolor{purple}{$l$}
+    \item Linear Eccentricity\aster: The length between the Orbital Center and either focus; \textcolor{OliveGreen}{$c$}
+    \item Radius of Prime Focus: The distance from the prime focus to an arbitrary point; \textcolor{teal}{$r_1$}
+    \item Radius of Empty Focus\aster: The distance from the empty focus to an arbitrary point; \textcolor{brown}{$r_2$}\\
+\end{itemize}
+
+
+Many of the above don't work in all circumstances. When $\textcolor{black}{e} > 1$, many of these items' meanings break down. Most notably when $\textcolor{black}{e} = 1$, many of these values have a limit of either infinity, or are undefined between positive and negative infinity, making their use difficult, or impossible in a general context. Values which break the orbital context at some point have been marked with an asterisk.
+
+The reason why these values break down is because they are in some way defined by the Empty Focus. The issue here is that the Empty Focus does not always exist in the context of an orbiting body. When $\textcolor{black}{e}\geq1$, the orbit is no longer a closed shape, and the points where $\textcolor{teal}{r_1} \geq \textcolor{brown}{r_2}$ are no longer reachable. When this occurs, values like Apoapsis and Semi Major Axis are no longer suitable for navigation and make computation a headache, at best. For this reason we will only use values defined solely by their relationship to the Primary Focus, and those equations and formulas that do use these unstable values will be redefined to universally applicable formulae, using the values listed above without the asterisk.

@@ -1,0 +1,50 @@
+\subsubsection{Principles}
+The \textbf{Circle} is perhaps the most well known Conic Section and by far the simplest. Because of this simplicity, satellites often are put in as circular orbits as possible.
+\begin{center}
+\begin{tikzpicture}
+    \newcommand{\da}{5}
+    \newcommand{\db}{5}
+    \newcommand{\dc}{0}
+    \newcommand{\dl}{5}
+    %\draw (0,0) ellipse (\da cm and \db cm);
+    \begin{scope}[scale=.5]
+    \draw [domain= 0:360, scale=1,samples=500,shift={(\dc,0)}] plot (\x:{\dl / ((\dc / \da) * cos(\x) + 1)});
+    \draw[teal] (0,0) -- (0.7071 * \da, -0.7071 * \da);
+    \draw[blue] (0,0) -- (- \da,0);
+    \draw[red] (0,0) -- (0,\db);
+    \draw[orange] (\dc,0) -- (\da,0);
+    \draw[purple, thick] (\dc,0) -- (\dc,\dl);
+    \filldraw [black] (\dc,0) circle (1pt) node[anchor = north east] {focus};
+    \node[anchor = north east] at (\da * 0.7071/2, \da * -0.7071/2) {\textcolor{teal}{$r_1$}};
+    \node[anchor = east] at (\dc, \dl / 2) {\textcolor{purple}{$l$}};
+    \node[anchor = north] at (\dc/ 2 +\da / 2, 0) {\textcolor{orange}{$p$}};
+    \node[anchor = north] at (- \da / 2, 0) {\textcolor{blue}{$a$}};
+    \node[anchor = west] at (0, \db/2) {\textcolor{red}{$b$}};
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+
+Defining Property: All points are equidistant from the center.
+
+\begin{multicols}{2}
+\noindent
+ $$r = \text{\textit{constant}}$$
+ $$r = \textcolor{teal}{r_1} = \textcolor{brown}{r_2}$$
+ $$r = \textcolor{blue}{a} = \textcolor{red}{b}$$
+ $$x^2 + y^2 = \textcolor{black}{r}^2$$
+ $$x^2 + y^2 = \textcolor{teal}{r_1}^2$$
+ $$\left(\frac{x}{\textcolor{teal}{r_1}}\right)^2 + 
+ \left(\frac{y}{\textcolor{teal}{r_1}}\right)^2 = 1$$
+ $$\left(\frac{x}{\textcolor{blue}{a}}\right)^2 + \left(\frac{y}{\textcolor{red}{b}}\right)^2 = 1$$
+ \end{multicols}
+ 
+ Here we can see that a circle is actually just a special case of an ellipse, where Semi Major Axis equals Semi Minor Axis. We can take advantage of this fact to find/verify the domain of the shape.
+ $$\textcolor{blue}{a} = \textcolor{red}{b}$$
+ $$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{1-\textcolor{black}{e}^2}$$
+ $$\textcolor{blue}{a} = \textcolor{blue}{a}\sqrt{1-\textcolor{black}{e}^2}$$
+ $$1^2 = 1-\textcolor{black}{e}^2$$
+ $$\textcolor{black}{e} = 0$$
+ 
+ Not only is a circle just an ellipse with equivalent Major and Minor Axis, we can prove that it is an ellipse with an eccentricity of zero.
+ 
+ Additionally, since all points are equidistant to the focus, the Semi Latus Rectum is also equal to radius.

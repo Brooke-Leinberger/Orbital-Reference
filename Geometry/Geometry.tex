@@ -1,0 +1,87 @@
+\chapter{Geometry}
+\usetikzlibrary{calc,patterns,angles,quotes}
+%\section{Introduction}
+\section{Introduction to Conic Sections}
+Thanks to the work of Johannes Kepler and Sir Issac Newton, we know what the base geometries which orbiting bodies follow when only under the influence of gravity: \textbf{Conic Sections}. However, these base geometries aren't always 100\% true to life. While quickly diminishing with distance, gravity's reach is infinite in the universe, and with all the mass surrounding us, those tiny pulls can add up to what is known as ``Orbital Perturbations". Due to the difficulty in computing perturbations, it is better covered in a follow-up paper. For now it is sufficient to compute just the ideal trajectory. In this chapter, we will individually explore each conic section, their principal parts, and their limitations, before finding their commonalities to establish a universal geometric description of satellite motion.
+
+There are four basic conic sections (in order of increasing eccentricity): \textbf{Circle}, \textbf{Ellipse}, \textbf{Parabola}, and \textbf{Hyperbola}. As Eccentricity increases, the commonalities between the shapes diminishes, most notably with the Parabola.
+\\
+\newcommand{\aster}{\textcolor{red}{*}}
+
+Common parts of conic sections:
+\begin{itemize}
+    \item \textbf{Primary Focus}: The focus of the orbit where the center of mass of the orbit lies (usually just the planet or star being orbited).
+    \item \textbf{Empty Focus}\aster: The other focus of the orbit, which is typically unoccupied.
+    \item \textbf{Center}\aster: The center of the conic section; At the midpoint between the two foci; At the midpoint between Apoapsis and Periapsis.
+    \item \textbf{Periapsis}: The point on the conic section that is closest to the primary focus; \textcolor{orange}{p}
+    \item \textbf{Apoapsis}\aster: The point on the conic section that is farthest from the primary focus; The point closest to the empty focus.
+    \item \textbf{True Anomaly}: The angle as measured from the primary focus, between Periapsis and a point on the conic section, going counter-clockwise (direction of motion); \textcolor{black}{$\theta_t$}
+    \item \textbf{Major Axis}\aster: The longer axis of the orbit. It lies from Periapsis to Apoapsis.
+    \item \textbf{Minor Axis}\aster: The shorter axis of the orbit. It lies perpendicular to the Major axis, with its midpoint lying on the center.
+    \item \textbf{Latus Rectum}: The chord intersecting the primary focus, running perpendicular to the Major Axis.
+    \item \textbf{Eccentricity}: A scalar metric measuring how far a conic section/orbit deviates from a circle; \textcolor{black}{$e$}
+    \item \textbf{Latus Scale}: A scalar metric used in conjunction with Eccentricity, as it is used to define several other properties in the orbit; The ratio between Semi Latus Rectum and Semi Major Axis; \textcolor{black}{$s$}
+    \item \textbf{Semi Major Axis}\aster: 1/2 the length of the Major Axis;  \textcolor{blue}{$a$}
+    \item \textbf{Semi Minor Axis}\aster: 1/2 the length of the Minor Axis; \textcolor{red}{$b$}
+    \item \textbf{Semi Latus Rectum}: 1/2 the length of the Semi Latus Rectum;  \textcolor{purple}{$l$}
+    \item \textbf{Linear Eccentricity}\aster: The length between the center and either focus; The product of Semi Major Axis and Eccentricity; \textcolor{OliveGreen}{$c$}
+    \item \textbf{Radius of Prime Focus}: The distance from the Prime Focus to an arbitrary point; \textcolor{teal}{$r_1$}
+    \item \textbf{Radius of Empty Focus}\aster: The distance from the Empty Focus to an arbitrary point; \textcolor{brown}{$r_2$}
+    \item \textbf{Constant of Radius}: The constant resulting from either adding or subtracting the Radii together.
+\end{itemize}
+\bigskip
+
+Many of the above don't work in all circumstances. In the case of open trajectories (i.e. when $\textcolor{black}{e} \geq 1$) many of these items' meanings break down. Most notably for the Parabola ($\textcolor{black}{e} = 1$), many of these values have a limit of either infinity, or are undefined between positive and negative infinity, making their use difficult, or impossible in a general context. Values which break the orbital context at some point have been marked with an asterisk.
+
+The reason why these values break down is because they are in some way defined by the Empty Focus. The issue here is that the Empty Focus does not always exist in the context of an orbiting body. When $\textcolor{black}{e}\geq1$, the orbit is no longer a closed shape, and the points where $\textcolor{teal}{r_1} \geq \textcolor{brown}{r_2}$ are no longer reachable. When this occurs, values like Apoapsis and Semi Major Axis are no longer suitable for navigation and make computation a headache, at best. For this reason we will only use values defined solely by their relationship to the Primary Focus, and those equations and formulas that do use these unstable values will be redefined to universally applicable formulae, using the values listed above without the asterisk.
+
+For that reason, we will use Semi Latus Rectum and Eccentricity for our \textbf{geometric identities}, or the properties used to define an orbit. It is also possible to substitute one of these properties for Periapsis as it comes up frequently in navigation, and only two properties are required to calculate the geometry of an orbit.
+
+There are two main classes of orbit geometries: \textbf{closed orbits}, which correspond to perpetually orbiting satellites, and \textbf{open orbits}, which correspond to escape trajectories; ones that will orbit once before being ejected away from the orbited body, never orbiting it again.
+\newpage
+\subfile{Ellipse/Ellipse}
+\newpage
+
+\subfile{Hyperbola/Hyperbola}
+\newpage
+
+\subfile{Circle/Circle}
+\newpage
+
+\subfile{Parabola/Parabola}
+\newpage
+
+\subfile{Area/Area}
+\newpage
+
+\normalsize
+
+\section{Conclusion}
+
+When translating from Cartesian to Polar, all conic sections have extremely similar properties, with the main exception of Semi Latus scale, and the properties defined by Semi Latus Scale (Marked by a `\aster' in section 2.1).
+
+\bigskip
+\noindent
+Common properties:
+\begin{itemize}
+    \item $\textcolor{purple}{l}$ : Identity
+    \item $\textcolor{black}{e}$ : Identity
+    \item $\textcolor{orange}{p} = \frac{\textcolor{purple}{l}}{1+\textcolor{black}{e}}$
+    \item $\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$
+\end{itemize}
+\bigskip
+Area Formulae:
+\begin{itemize}
+    \item Elliptical Area: $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)} \left(
+\frac{2\arctan\left(\sqrt{\frac{1-\textcolor{black}{e}}{1+\textcolor{black}{e}}}\tan{\left(\frac{\theta}{2}\right)}\right)}{\sqrt{1-\textcolor{black}{e}^2}}
+-\frac{\textcolor{black}{e}\sin{\theta}}{\textcolor{black}{e}\cos{\theta}+1}\right)_{\theta_1}^{\theta_2}$
+    \item Hyperbolic Area: $A=\frac{\textcolor{purple}{l}^2}{2(1-\textcolor{black}{e}^2)} \left(
+\frac{2\arctanh\left(\sqrt{\frac{\textcolor{black}{e}-1}{\textcolor{black}{e}+1}}\tan{\left(\frac{\theta}{2}\right)}\right)}{\sqrt{\textcolor{black}{e}^2-1}}
+-\frac{\textcolor{black}{e}\sin{\theta}}{\textcolor{black}{e}\cos{\theta}+1}\right)_{\theta_1}^{\theta_2}$
+    \item Parabolic Area: $A=\frac{\textcolor{purple}{l}^2}{2}\left(
+\frac{\tan{\left(\frac{\theta}{2}\right)}\left(\tan^2{\left(\frac{\theta}{2}\right)}-1\right)(\cos{\theta}+1)
++6\cos{\theta}\cdot\tan{\left(\frac{\theta}{2}\right)}
+-8\sin{\theta}}
+{-12(\cos{\theta}+1)}
+\right)_{\theta_1}^{\theta_2}$
+\end{itemize}

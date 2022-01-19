@@ -1,0 +1,136 @@
+
+\subsubsection{Principles}
+The first conic section we will examine is the ellipse, which is most characterized by its closed shape and oblong / ``squished" appearance.
+
+\begin{center}
+$$\text{Standard Formula: } \left(\frac{x}{\textcolor{blue}{a}}\right)^2 + \left(\frac{y}{\textcolor{red}{b}}\right)^2 = 1$$
+\begin{multicols}{2}[Local Properties]
+\begin{itemize}
+    \item Semi Latus Rectum: \textcolor{purple}{$l$}
+    \item Semi Major Axis: \textcolor{blue}{$a$}
+    \item Semi Minor Axis: \textcolor{red}{$b$}
+    \item Linear Eccentricity: \textcolor{OliveGreen}{$c$}
+    \item Radius of Prime Focus: \textcolor{teal}{$r_1$}
+    \item Radius of Empty Focus: \textcolor{brown}{$r_2$}
+    
+\end{itemize}
+\end{multicols}
+\begin{tikzpicture}
+    \centering
+    \newcommand{\da}{5}
+    \newcommand{\db}{3}
+    \newcommand{\dc}{4}
+    \newcommand{\dl}{1.8}
+    
+    %lines
+    \draw (0,0) ellipse (\da cm and \db cm);
+    \draw[blue] (0,0) -- (- \da,0);
+    \draw[red] (0,0) -- (0,\db);
+    \draw[OliveGreen] (0,0) -- (\dc,0);
+    \draw[orange] (\dc,0) -- (\da,0);
+    \draw[teal] (0, \db) -- (\dc, 0);
+    \draw[brown] (0, \db) -- (-\dc, 0);
+    \draw[purple, thick] (\dc,0) -- (\dc,\dl);
+    \scriptsize
+    
+    %points and labels
+    \filldraw [black] (\dc,0) circle (1pt) node[anchor = north east] {prime focus};
+    \filldraw [black] (-\dc,0) circle (1pt) node[anchor = north] {empty focus};
+    \normalsize
+    \node[anchor = north] at (- \da / 2, 0) {\textcolor{blue}{$a$}};
+    \node[anchor = west] at (0, \db/2) {\textcolor{red}{$b$}};
+    \node[anchor = north] at (\dc / 2, 0) {\textcolor{OliveGreen}{$c$}};
+    \node[anchor = east] at (\dc, \dl / 2) {\textcolor{purple}{$l$}};
+    \node[anchor = south west] at (\dc / 2,\db / 2) {\textcolor{teal}{$r_1$}};
+    \node[anchor = south east] at (-\dc / 2,\db / 2) {\textcolor{brown}{$r_2$}};
+    \node[anchor = north] at (\dc / 2 +\da / 2, 0) {\textcolor{orange}{$p$}};
+\end{tikzpicture}
+\end{center}
+
+Defining principle:  The distances between an arbitrary point on the ellipse, and the two foci, have a constant sum:
+$$\textcolor{teal}{r_1} + \textcolor{brown}{r_2} = \text{{\textit{Constant of Radius}}}$$
+
+The \textbf{\textit{Constant of Radius}} for an Ellipse is very simple to define in terms In the case of the point being on the Periapsis of the Ellipse. The Primary Radius will be the difference of between the Semi Major Axis and the Linear Eccentricity, while the Empty Radius will be the sum of the Semi Major Axis and the Linear Eccentricity.
+
+\bigskip
+\begin{minipage}{\textwidth}
+$$\textcolor{teal}{r_1} =  \textcolor{blue}{a}-\textcolor{OliveGreen}{c}$$
+$$\textcolor{brown}{r_2} =  \textcolor{blue}{a}+\textcolor{OliveGreen}{c}$$
+$$\text{\textit{Constant of Radius}}= (\textcolor{blue}{a}-\textcolor{OliveGreen}{c}) + (\textcolor{blue}{a}+\textcolor{OliveGreen}{c})$$
+$$\text{{\textit{Constant of Radius}}}=2\textcolor{blue}{a}$$
+\begin{center}
+\scriptsize{\textit{(The Constant of Radius applies not just to Periapsis, but to every point on the ellipse as well.)}}
+\normalsize
+\end{center}
+\end{minipage}
+\bigskip
+
+Now that we have the defining principle defined algebraically, we can now also define the geometric identities: \textbf{Eccentricity} and \textbf{Semi Latus Rectum}. Because Semi Latus Rectum is perpendicular to the Major Axis, we can achieve this creating a right triangle, using Semi Latus Rectum as one leg, and the distance between the foci as the other leg, and using Pythagorean's Theorem.
+
+
+$$\textcolor{teal}{r_1} = \textcolor{purple}{l}$$
+$$\textcolor{brown}{r_2} = 2\textcolor{blue}{a} - \textcolor{purple}{l}$$
+$$\textcolor{teal}{r_1}^2 + (2\textcolor{OliveGreen}{c})^2 = \textcolor{brown}{r_2}^2$$
+$$\textcolor{purple}{l}^2 + 4\textcolor{blue}{a}^2\textcolor{black}{e}^2 = (2\textcolor{blue}{a} - \textcolor{purple}{l})^2$$
+$$\textcolor{purple}{l}^2 + 4\textcolor{blue}{a}^2\textcolor{black}{e}^2 = 4\textcolor{blue}{a}^2-4\textcolor{purple}{l}\textcolor{blue}{a}+\textcolor{purple}{l}^2$$
+$$4\textcolor{blue}{a}^2\textcolor{black}{e}^2 = 4\textcolor{blue}{a}^2-4\textcolor{purple}{l}\textcolor{blue}{a}$$
+$$\textcolor{blue}{a}\textcolor{black}{e}^2 = \textcolor{blue}{a} - \textcolor{purple}{l}$$
+$$\textcolor{purple}{l} = \textcolor{blue}{a}(1-\textcolor{black}{e}^2)$$
+
+
+\textbf{Latus Scale} is another scalar metric that appears often, and is convenient to have defined.
+
+$$\textcolor{black}{s}=\frac{\textcolor{purple}{l}}{\textcolor{blue}{a}}$$
+$$\textcolor{black}{s} = \frac{\textcolor{blue}{a}(1-\textcolor{black}{e}^2)} {\textcolor{blue}{a}}$$
+$$\textcolor{black}{s} = 1-\textcolor{black}{e}^2$$
+$$\textcolor{purple}{l} = \textcolor{blue}{a} \textcolor{black}{s}$$
+
+\textbf{Periapsis} can also serve as a geometric identity, so it is important to have it defined as well.
+
+\bigskip
+\begin{minipage}{\textwidth}
+\begin{multicols}{2}
+\raggedcolumns
+\noindent
+$$\textcolor{blue}{a} = \textcolor{orange}{p} + \textcolor{OliveGreen}{c}$$
+$$\textcolor{orange}{p} = \textcolor{blue}{a} - \textcolor{OliveGreen}{c}$$
+$$\textcolor{orange}{p} = \textcolor{blue}{a}(1 - \textcolor{black}{e})$$
+$$\textcolor{orange}{p} = \frac{\textcolor{purple}{l}}
+{1 + \textcolor{black}{e}}$$
+\end{multicols}
+\end{minipage}
+\bigskip
+
+Finally to define the last undefined value, \textbf{Semi Minor Axis}, we have the case of the covertex. At this point, both radial lines between the foci and the point form the hypotenuse of a right triangle with the legs being the Semi Minor Axis and Linear Eccentricity. Since they both form the hypotenuse of right triangles with the same legs, they must also be equal.
+
+\begin{minipage}{\textwidth}
+\begin{multicols}{2}
+\raggedcolumns
+$$\textcolor{teal}{r_1} + \textcolor{brown}{r_2} = 2\textcolor{blue}{a}$$
+$$\textcolor{brown}{r_2} = 2\textcolor{blue}{a} - \textcolor{teal}{r_1}
+$$
+$$\textcolor{teal}{r_1}=\textcolor{brown}{r_2}$$
+$$\textcolor{teal}{r_1} + \textcolor{teal}{r_1} = 2\textcolor{blue}{a}$$
+$$\textcolor{teal}{r_1} = \textcolor{blue}{a}$$
+\columnbreak
+\\$$\textcolor{teal}{r_1}^{2} = \textcolor{red}{b}^2 + \textcolor{OliveGreen}{c}^{2}$$
+$$\textcolor{blue}{a}^{2} = \textcolor{red}{b}^2 + \textcolor{OliveGreen}{c}^{2}$$
+$$\textcolor{red}{b}^{2} = \textcolor{blue}{a}^2 - \textcolor{OliveGreen}{c}^{2}$$
+$$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{1-\textcolor{black}{e}^2}$$
+$$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{\textcolor{black}{s}}$$
+\end{multicols}
+\end{minipage}
+
+Pinpointing the domain of the ellipse can also help in ensuring we cover all cases. The main limitation of the standard ellipse formula is the value of Semi Minor Axis ($\textcolor{red}{b}$).
+
+$$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{\textcolor{black}{s}}$$
+$$\textcolor{red}{b} = \textcolor{blue}{a}\sqrt{1-\textcolor{black}{e}^2}$$
+
+$$\sqrt{1-\textcolor{black}{e}^2}\text{  is defined for  } 1-\textcolor{black}{e}^2 \geq 0$$
+$$1-\textcolor{black}{e}^2 \geq 0$$
+$$\textcolor{black}{e}^2-1 \leq 0$$
+$$\textcolor{black}{e}^2 \leq 1$$
+$$-1 \leq \textcolor{black}{e} \leq 1$$
+
+
+Although technically $-1\leq\textcolor{black}{e}\leq1$, $\textcolor{black}{e} = 0$ and $\textcolor{black}{e} = 1$ are edge cases which are better described by other conic sections, and $\textcolor{black}{e} < 0$ is simply ignored since negative eccentricities operate identically to positive eccentricities, but flipped over the $y$ axis. So the domain of this ellipse in this documentation is $0<\textcolor{black}{e}<1$.

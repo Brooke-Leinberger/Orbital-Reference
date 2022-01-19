@@ -1,0 +1,46 @@
+\subsection{Radius as True Anomaly}
+\begin{center}
+\begin{tikzpicture}
+    \newcommand{\da}{5}
+    \newcommand{\db}{5}
+    \newcommand{\dc}{0}
+    \newcommand{\dl}{5}
+    \renewcommand{\dh}{0.7071 * \da}
+    %\draw (0,0) ellipse (\da cm and \db cm);
+    \begin{scope}[scale=.5]
+    
+    \coordinate (p) at (\da, 0);
+    \coordinate (f) at (0, 0);
+    \coordinate (r) at (\dh, -\dh);
+    
+    \pic [draw=RoyalPurple, ->, scale = .5, "\textcolor{RoyalPurple}{$\theta_t$}", angle eccentricity=2] {angle = p--f--r};
+    
+    \draw [domain= 0:360, scale=1,samples=500,shift={(\dc,0)}] plot (\x:{\dl / ((\dc / \da) * cos(\x) + 1)});
+    \draw[teal] (0,0) -- (\dh, -\dh);
+    %\draw[blue] (0,0) -- (- \da,0);
+    %\draw[red] (0,0) -- (0,\db);
+    \draw[orange] (\dc,0) -- (\da,0);
+    \draw[purple, thick] (\dc,0) -- (\dc,\dl);
+    \filldraw [black] (\dc,0) circle (1pt) node[anchor = north east] {focus};
+    \node[anchor = north east] at (\da * 0.7071/2, \da * -0.7071/2) {\textcolor{teal}{$r_1$}};
+    \node[anchor = east] at (\dc, \dl / 2) {\textcolor{purple}{$l$}};
+    \node[anchor = north] at (\dc/ 2 +\da / 2, 0) {\textcolor{orange}{$p$}};
+    %\node[anchor = north] at (- \da / 2, 0) {\textcolor{blue}{$a$}};
+    %\node[anchor = west] at (0, \db/2) {\textcolor{red}{$b$}};
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+    
+Since we know that a circle is an ellipse with a specific value of eccentricity ($\textcolor{black}{e}=0$), we can verify that the Ellipse Primary Radius Formula is valid for a circle.
+
+$$\textcolor{purple}{l} = \textcolor{teal}{r_1}$$
+
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$$
+
+$$\textcolor{teal}{r_1} = \frac{\textcolor{teal}{r_1}}{(0)\cos{\textcolor{black}{\theta_t}} + 1}$$
+
+$$\textcolor{teal}{r_1} = \frac{\textcolor{teal}{r_1}}{1}$$
+
+$$\textcolor{teal}{r_1} = \textcolor{teal}{r_1}$$
+
+$$\text{Circle Primary Radius Formula: }\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$$

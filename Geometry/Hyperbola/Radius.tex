@@ -1,0 +1,94 @@
+\subsubsection{Radius As True Anomaly}
+\begin{center}
+\begin{tikzpicture}
+    \newcommand{\es}{1.25}
+    \newcommand{\scale}{1.5}
+    \newcommand{\asymptote}{120}
+    \newcommand{\offset}{20}
+    \newcommand{\ch}{1}
+    %\newcommand{\bh}{1.75}
+    \newcommand{\lh}{2.25}
+    \newcommand{\xh}{-0.2201}
+    \newcommand{\yh}{-2.5155}
+    \tiny
+    
+    \coordinate (p) at (1 * \scale, 0);
+    \coordinate (f) at (0, 0);
+    \coordinate (r) at (\xh * \scale, \yh * \scale);
+    
+    \pic [draw=RoyalPurple, ->, scale = 1, "\textcolor{RoyalPurple}{$\theta_t$}", angle eccentricity=1.5] {angle = p--f--r};
+    
+    \filldraw [black] (0,0) circle (1pt) node[anchor = north west] {prime focus};
+    \filldraw [black] (\xh * \scale,\yh * \scale) circle (1pt) node[anchor = north west] {$h$};
+    \node[anchor = west] at (0.5 * \xh * \scale, 0.5 * \yh * \scale) {\textcolor{teal}{$r_1$}};
+    \node[anchor = south] at (0.5 * \scale * \ch, 0) {\textcolor{orange}{$p$}};
+    \node[anchor = east] at (0, \lh * \scale * 0.5) {\textcolor{purple}{$l$}};
+    \node[anchor = north] at (\xh * \scale * 0.5, 0) {\textcolor{blue}{$x$}};
+    \node[anchor = east] at (\xh * \scale, \yh * \scale * 0.5) {\textcolor{red}{$y$}};
+    \draw[domain= -(\asymptote - \offset): (\asymptote - \offset),scale=\scale,samples=500] plot (\x:{\lh / (\es * cos(\x) + 1)});
+    \draw [teal]  (\xh * \scale, \yh * \scale) -- (0,0);
+    \draw [purple]  (0, \lh * \scale) -- (0,0);
+    \draw [blue]    (\xh * \scale, 0) -- (0,0);
+    \draw [red]     (\xh * \scale, 0) -- (\xh * \scale, \yh * \scale);
+    \draw [orange]  (\ch * \scale, 0) -- (0,0);
+    
+    \normalsize
+\end{tikzpicture}
+\end{center}
+
+Defining a function for radius using True Anomaly is a pretty straight forward process. Since these models of orbits always have:
+\begin{itemize}
+    \item Periapsis directly to the right of the primary focus, on the $x$ axis;
+    \item True Anomaly is defined as zero at periapsis;
+    \item True Anomaly is measured counter clockwise (the direction of motion for all of these models);
+\end{itemize}
+So it's just a straight forward conversion from Cartesian to Polar coordinates.
+
+$$\text{Standard Hyperbola Formula: } \left(\frac{x}{\textcolor{blue}{a}}\right)^2 - \left(\frac{y}{\textcolor{red}{b}}\right)^2 = 1$$
+$$\text{Focus-Offset Hyperbola Formula: } \left(\frac{x-\textcolor{OliveGreen}{c}}{\textcolor{blue}{a}}\right)^2 - \left(\frac{y}{\textcolor{red}{b}}\right)^2 = 1$$
+
+$$\frac{(x-\textcolor{OliveGreen}{c})^2}{\textcolor{blue}{a}^2} - \frac{y^2}{\textcolor{red}{b}^2} = 1$$
+$$\textcolor{red}{b}^2\frac{(x-\textcolor{OliveGreen}{c})^2}{\textcolor{blue}{a}^2} - y^2 = \textcolor{red}{b}^2$$
+$$\textcolor{black}{s}(x-\textcolor{OliveGreen}{c})^2 - y^2 = \textcolor{red}{b}^2$$
+$$\textcolor{black}{s}(x^2 - 2x\textcolor{OliveGreen}{c} + \textcolor{OliveGreen}{c}^2) - y^2 - \textcolor{red}{b}^2 = 0$$
+$$\textcolor{black}{s}x^2 - y^2 - 2x\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s} +\textcolor{blue}{a}^2\textcolor{black}{e}^2\textcolor{black}{s} - \textcolor{blue}{a}^2\textcolor{black}{s} = 0$$
+$$\textcolor{black}{s}(\textcolor{teal}{r_1}\cos{\textcolor{black}{\theta_t}})^2- (\textcolor{teal}{r_1}\sin{\textcolor{black}{\theta_t}})^2- 2(\textcolor{teal}{r_1}\cos{\textcolor{black}{\theta_t}})\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s} +\textcolor{blue}{a}^2\textcolor{black}{s}(\textcolor{black}{e}^2 - 1) = 0$$
+$$\textcolor{teal}{r_1}^2(\textcolor{black}{s}\cos^2{\textcolor{black}{\theta_t}} - \sin^2{\textcolor{black}{\theta_t}})+ \textcolor{teal}{r_1}(-2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}) + (\textcolor{blue}{a}^2\textcolor{black}{s}^2) = 0$$
+$$\textcolor{teal}{r_1}^2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - \cos^2{\textcolor{black}{\theta_t}} - \sin^2{\textcolor{black}{\theta_t}})+ \textcolor{teal}{r_1}(-2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}) + (\textcolor{blue}{a}^2\textcolor{black}{s}^2) = 0$$
+$$\textcolor{teal}{r_1}^2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - 1)+ \textcolor{teal}{r_1}(-2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}) + (\textcolor{blue}{a}^2\textcolor{black}{s}^2) = 0$$
+\\
+$$\textcolor{teal}{r_1} = \frac{2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}\pm\sqrt{(2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}})^2 - 4(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - 1)(\textcolor{blue}{a}^2\textcolor{black}{s}^2)}}{2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - 1)}$$
+
+$$\textcolor{teal}{r_1} = \frac{2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}}\pm\sqrt{4\textcolor{blue}{a}^2\textcolor{black}{s}^2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}}) + 4\textcolor{blue}{a}^2\textcolor{black}{s}^2(1-\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}})}}{2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - 1)}$$
+
+$$\textcolor{teal}{r_1} = \frac{2\textcolor{blue}{a}\textcolor{black}{e}\textcolor{black}{s}\cos{\textcolor{black}{\theta_t}} \pm2\textcolor{blue}{a}\textcolor{black}{s}\sqrt{(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}}) + (1 -\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}})}}{2(\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - 1)}$$
+
+$$\textcolor{teal}{r_1} =  \frac{\textcolor{blue}{a}\textcolor{black}{s}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} \pm\sqrt{1})}{\textcolor{black}{e}^2\cos^2{\textcolor{black}{\theta_t}} - 1^2}$$
+
+%$$\textcolor{teal}{r_1} = \frac{\textcolor{blue}{a}\textcolor{black}{s}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} \pm 1)}{(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}$$
+
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} \pm 1)}{(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}$$
+\bigskip
+\begin{multicols}{2}
+\raggedcolumns
+\noindent
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}{(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}$$
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1}$$
+$$\textcolor{orange}{p} = \frac{\textcolor{blue}{a}(\textcolor{black}{e}^2-1)}{\textcolor{black}{e}\cos{0} - 1}$$
+$$\textcolor{orange}{p} = \frac{\textcolor{blue}{a}(\textcolor{black}{e}+1)(\textcolor{black}{e}-1)}{\textcolor{black}{e} - 1}$$
+$$\textcolor{orange}{p} = \textcolor{blue}{a}(\textcolor{black}{e}+1)$$
+\centering
+\textcolor{red}{[REJECT]}
+\columnbreak
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)}{(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} - 1)(\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1)}$$
+$$\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$$
+$$\textcolor{orange}{p} = \frac{\textcolor{blue}{a}(\textcolor{black}{e}^2-1)}{\textcolor{black}{e}\cos{0} + 1}$$
+$$\textcolor{orange}{p} = \frac{\textcolor{blue}{a}(\textcolor{black}{e}+1)(\textcolor{black}{e}-1)}{\textcolor{black}{e} + 1}$$
+$$\textcolor{orange}{p} = \textcolor{blue}{a}(\textcolor{black}{e}-1)$$
+\centering
+\textcolor{green}{[ACCEPT]}
+\end{multicols}
+
+$$\text{Hyperbola Primary Radius Formula: }\textcolor{teal}{r_1} = \frac{\textcolor{purple}{l}}{\textcolor{black}{e}\cos{\textcolor{black}{\theta_t}} + 1}$$
+
+(Here we can also see that the radius function is in fact congruent with the Ellipse radius function, as stated in the last part of the previous section.)

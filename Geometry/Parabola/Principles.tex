@@ -1,0 +1,73 @@
+\subsubsection{Principles}
+The \textbf{Parabola} is the case between the Ellipse and Hyperbola. Right at the moment when a closed elliptical trajectory opens up to become an escape trajectory. Because it is the moment when a satellite escapes the gravitational confines of the body its orbiting, its farthest point should be at infinity. 
+\begin{center}
+$$\text{Standard Formula: }  y^2=-4\textcolor{orange}{p}x$$
+\begin{multicols}{2}
+\begin{itemize}
+    \item Semi Latus Rectum: \textcolor{purple}{$l$}
+    \item Periapsis: $\textcolor{orange}{p}$
+    %\item Semi Minor Axis: \textcolor{red}{$b$}
+    %\item Linear Eccentricity: \textcolor{OliveGreen}{$c$}
+    \item Radius of Prime Focus: \textcolor{teal}{$r_1$}
+    \item Radius of Directrix: \textcolor{brown}{$r_2$}
+    
+\end{itemize}
+\end{multicols}
+\begin{tikzpicture}
+    \newcommand{\es}{1}
+    \newcommand{\scale}{1}
+    \newcommand{\asymptote}{180}
+    \newcommand{\offset}{60}
+    \newcommand{\ch}{1}
+    \newcommand{\lh}{2}
+    \newcommand{\xh}{0.8284}
+    \newcommand{\yh}{-0.8284}
+    \newcommand{\dir}{3.4641}
+    %periapsis set to 1
+    \tiny
+    \filldraw [black] (0,0) circle (1pt) node[anchor = north east] {prime focus};
+    \filldraw [black] (\xh * \scale,\yh * \scale) circle (1pt) node[anchor = north east] {$h$};
+    \filldraw [black] (0,0) circle (1pt) node[anchor = north east] {prime focus};
+    \draw[domain= -(\asymptote - \offset): (\asymptote - \offset),scale=\scale,samples=500] plot (\x:{\lh / (\es * cos(\x) + 1)});
+    
+    \draw [teal] (\xh * \scale, \yh * \scale) -- (0,0);
+    \draw [brown] (\xh * \scale, \yh * \scale) -- (2 *\scale, \yh * \scale);
+    \draw [orange] (0,0) -- (\ch * \scale,0);
+    \draw[orange, dashed] (\ch * \scale,0) -- (2 * \ch * \scale,0);
+    \draw [purple] (0,0) -- (0, \lh * \scale);
+    \draw [black,<->] (2 * \ch * \scale, \dir * \scale) -- (2 * \scale, -\dir * \scale);
+    
+    
+    \node[anchor = north east] at (0.5 * \xh * \scale, 0.5 * \yh * \scale) {\textcolor{teal}{$r_1$}};
+    \node[anchor = north] at (0.5 * \xh * \scale + \scale, \yh * \scale) {\textcolor{brown}{$r_2$}};
+    \node[anchor = south] at (0.5 * \ch * \scale, 0) {\textcolor{orange}{$p$}};
+    \node[anchor = south] at (1.5 * \ch * \scale, 0) {\textcolor{orange}{$p$}};
+    \node[anchor = west] at (0, \lh * \scale * 0.5) {\textcolor{purple}{$l$}};
+    \normalsize
+\end{tikzpicture}
+\end{center}
+Defining principle: The distance between an arbitrary point on the Parabola and the prime focus, and the distance between the same arbitrary point and the directrix, are equal:
+$$\textcolor{teal}{r_1} = \textcolor{brown}{r_2}$$
+$$\text{\textit{Constant of Radius}} = \textcolor{teal}{r_1} - \textcolor{brown}{r_2}$$
+$$\text{\textit{Constant of Radius}} = 0$$
+
+Unlike the Hyperbola, the Parabola cannot use the values defined by the Empty Focus \textit{at all}, since the Empty Focus is infinitely far away from the periapsis. Instead of using the Empty Focus to determine the relationship of Prime Radius, we will use a directrix opposite the Prime Focus from Periapsis. For \textbf{Semi Latus Rectum} we can simply plug and play with the given formula.
+
+\bigskip
+\begin{minipage}{\textwidth}
+$$y^2=-4\textcolor{orange}{p}x$$
+$$\textcolor{purple}{l}^2 = -4\textcolor{orange}{p}(-\textcolor{orange}{p})$$
+$$\textcolor{purple}{l}^2 = 4\textcolor{orange}{p}^2$$
+$$\textcolor{purple}{l} = 2\textcolor{orange}{p}$$
+\end{minipage}
+\bigskip
+
+Pinpointing the domain of the Parabola can also help in ensuring we cover all cases. However, unlike Hyperbolas and Ellipses, Parabolas do no have a Semi Minor Axis with a convenient limit to derive. Instead we can use the consistent relationship found in the other 3 conic sections to derive its domain with respect to eccentricity.
+%<3
+
+$$\textcolor{purple}{l} = \textcolor{orange}{p}(1 + \textcolor{black}{e})$$
+$$2\textcolor{orange}{p} = \textcolor{orange}{p}(1 + \textcolor{black}{e})$$
+$$2 = 1 + \textcolor{black}{e}$$
+$$\textcolor{black}{e} = 1$$
+
+Although technically $\textcolor{black}{e}\leq-1\text{ or } \textcolor{black}{e} \geq 1$, $\textcolor{black}{e} = 1$ is an edge case which is better described by other conic section, and $\textcolor{black}{e} < 0$ is simply ignored since negative eccentricities operate identically to positive eccentricities, but flipped over the $y$ axis. So the domain of this hyperbola in this documentation is $\textcolor{black}{e} > 1$.
